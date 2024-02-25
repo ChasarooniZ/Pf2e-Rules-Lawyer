@@ -8,7 +8,7 @@ Hooks.once('ready', function () {
             const position = "bot-right";
             const anchor = getAnchor(position);
             const file = 'modules/pf2e-rules-lawyer/resources/every-plus-one-extra.webm';
-            const xOffset = 40;
+            const xOffset = -40;
             const yOffset = 0
             const duration = 5000;
             const fadeOutDuration = 1000;
@@ -18,7 +18,7 @@ Hooks.once('ready', function () {
                 .file(file)
                 .screenSpace()
                 .screenSpaceAnchor(anchor)
-                .screenSpacePosition({ x: chatWidth + xOffset, y: yOffset })
+                .screenSpacePosition({ x:xOffset - chatWidth, y: yOffset })
                 .duration(duration)
                 .fadeOut(fadeOutDuration)
                 .scale(scale)
