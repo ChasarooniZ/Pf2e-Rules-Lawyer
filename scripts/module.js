@@ -54,19 +54,17 @@ function getAnchor(position) {
 }
 
 function getUIOffset(position) {
-    controls.offsetWidth
-    chat.offsetWidth;
     switch (position) {
         case 'bot-left':
-            return controls.offsetWidth
+            return $('nav#controls').width()
         case 'bot-right':
             return -
-            chat.offsetWidth;
+            $('.chat-sidebar').width();
         case 'top-left':
-            return controls.offsetWidth
+            return $('nav#controls').width()
         case 'top-right':
             return -
-            chat.offsetWidth;
+            $('.chat-sidebar').width();
         default:
             return 0;
     }
