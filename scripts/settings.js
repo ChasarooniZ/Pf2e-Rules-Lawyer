@@ -24,7 +24,7 @@ Hooks.on("init", () => {
         hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.offset.y.hint"),
         scope: "world",
         config: true,
-        default: -50,
+        default: -40,
         type: Number,
     });
     
