@@ -22,6 +22,7 @@ Hooks.once('ready', function () {
                 .duration(duration)
                 .fadeOut(fadeOutDuration)
                 .scale(scale)
+                .forUsers(data?.chatMessage?.whisper ?? [...game.users.keys()])
                 .play()
         }
     })
