@@ -4,9 +4,9 @@ Hooks.once('ready', function () {
         if (!game.settings.get("pf2e-rules-lawyer", "enabled")) return;
         const sigMods = ["ESSENTIAL", "HELPFUL", "HARMFUL", "DETRIMENTAL"];
         if (data?.significantModifiers.some(mod => sigMods.includes(mod.significance))) {
-            const chatWidth = chat.offsetWidth;
             const position = "bot-right";
             const anchor = getAnchor(position);
+            const uiOffset = getUIOffset(position)
             const vidFile = 'modules/pf2e-rules-lawyer/resources/every-plus-one-extra.webm';
             const sfxFile = 'modules/pf2e-rules-lawyer/resources/rules-lawyer-sfx.ogg';
             const volume = 0.5;
@@ -21,7 +21,7 @@ Hooks.once('ready', function () {
                 .screenSpace()
                 .screenSpaceAnchor(anchor)
                 .screenSpaceAboveUI()
-                .screenSpacePosition({ x:xOffset - chatWidth, y: yOffset })
+                .screenSpacePosition({ x:xOffset + uiOffset, y: yOffset })
                 .duration(duration)
                 .fadeOut(fadeOutDuration)
                 .scale(scale)
@@ -50,5 +50,24 @@ function getAnchor(position) {
             return { x: 1, y: 0 }
         default:
             return { x: 0.5, y: 1 }
+    }
+}
+
+function getUIOffset(position) {
+    controls.offsetWidth
+    chat.offsetWidth;
+    switch (position) {
+        case 'bot-left':
+            return controls.offsetWidth
+        case 'bot-right':
+            return -
+            chat.offsetWidth;
+        case 'top-left':
+            return controls.offsetWidth
+        case 'top-right':
+            return -
+            chat.offsetWidth;
+        default:
+            return 0;
     }
 }
