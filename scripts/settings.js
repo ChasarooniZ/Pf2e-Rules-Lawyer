@@ -15,7 +15,7 @@ Hooks.on("init", () => {
         hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.offset.x.hint"),
         scope: "world",
         config: true,
-        default: -546 - 40,
+        default: -480,
         type: Number,
     });
 
@@ -24,7 +24,7 @@ Hooks.on("init", () => {
         hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.offset.y.hint"),
         scope: "world",
         config: true,
-        default: -150,
+        default: -50,
         type: Number,
     });
     
