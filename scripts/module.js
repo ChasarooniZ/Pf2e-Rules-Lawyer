@@ -11,6 +11,8 @@ Hooks.once('ready', function () {
             const xOffset = 40;
             const yOffset = 0
             const duration = 5000;
+            const fadeOutDuration = 1000;
+            const scale = 1/3;
             new Sequence()
                 .effect()
                 .file(file)
@@ -18,6 +20,9 @@ Hooks.once('ready', function () {
                 .screenSpaceAnchor(anchor)
                 .screenSpacePosition({ x: chatWidth + xOffset, y: yOffset })
                 .duration(duration)
+                .fadeOut(fadeOutDuration)
+                .scale(scale)
+                .play()
         }
     })
 });
