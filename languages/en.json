@@ -1,3 +1,21 @@
 {
-    "MODULE.hello": "hello"
+    "I18N.LANGUAGE": "English",
+    "pf2e-rules-lawyer": {
+        "module-settings": {
+            "enabled": {
+                "name": "Enable Module",
+                "hint": "Enables functionality of module"
+            },
+            "position": {
+                "name": "Enable Module",
+                "hint": "Enables functionality of module",
+                "choices": {
+                    "top-left": "Top Left",
+                    "top-right": "Top Right",
+                    "bot-left": "Bottom Left",
+                    "bot-right": "Bottom Right"
+                }
+            }
+        }
+    }
 }
