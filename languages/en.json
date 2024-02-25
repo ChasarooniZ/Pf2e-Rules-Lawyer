@@ -15,6 +15,16 @@
                     "bot-left": "Bottom Left",
                     "bot-right": "Bottom Right"
                 }
+            },
+            "offset": {
+                "x": {
+                    "name": "X Offset",
+                    "hint": "Offset in X axis"
+                },
+                "y": {
+                    "name": "Y Offset",
+                    "hint": "Offset in Y axis"
+                }
             }
         }
     }

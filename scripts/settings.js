@@ -9,6 +9,24 @@ Hooks.on("init", () => {
         default: true,
         type: Boolean,
     });
+
+    game.settings.register("pf2e-rules-lawyer", "offset.x", {
+        name: game.i18n.localize("pf2e-rules-lawyer.module-settings.offset.x.name"),
+        hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.offset.x.hint"),
+        scope: "world",
+        config: true,
+        default: -546 - 40,
+        type: Number,
+    });
+
+    game.settings.register("pf2e-rules-lawyer", "offset.y", {
+        name: game.i18n.localize("pf2e-rules-lawyer.module-settings.offset.y.name"),
+        hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.offset.y.hint"),
+        scope: "world",
+        config: true,
+        default: -150,
+        type: Number,
+    });
     
     // game.settings.register("pf2e-rules-lawyer", "position", {
     //     name: game.i18n.localize("pf2e-rules-lawyer.module-settings.position.name"),

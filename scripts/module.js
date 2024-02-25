@@ -7,21 +7,30 @@ Hooks.once('ready', function () {
             const chatWidth = chat.offsetWidth;
             const position = "bot-right";
             const anchor = getAnchor(position);
-            const file = 'modules/pf2e-rules-lawyer/resources/every-plus-one-extra.webm';
-            const xOffset = -40;
-            const yOffset = 0
+            const vidFile = 'modules/pf2e-rules-lawyer/resources/every-plus-one-extra.webm';
+            const sfxFile = 'modules/pf2e-rules-lawyer/resources/rules-lawyer-sfx.ogg';
+            const volume = 0.5;
+            const xOffset = game.settings.get("pf2e-rules-lawyer", "offset.x");
+            const yOffset = game.settings.get("pf2e-rules-lawyer", "offset.y");
             const duration = 5000;
             const fadeOutDuration = 1000;
             const scale = 1/3;
             new Sequence()
                 .effect()
-                .file(file)
+                .file(vidFile)
                 .screenSpace()
                 .screenSpaceAnchor(anchor)
+                .screenSpaceAboveUI()
                 .screenSpacePosition({ x:xOffset - chatWidth, y: yOffset })
                 .duration(duration)
                 .fadeOut(fadeOutDuration)
                 .scale(scale)
+                .forUsers(data?.chatMessage?.whisper ?? [...game.users.keys()])
+                .sound()
+                .file(sfxFile)
+                .volume(volume)
+                .duration(duration)
+                .fadeOutAudio(fadeOutDuration)
                 .forUsers(data?.chatMessage?.whisper ?? [...game.users.keys()])
                 .play()
         }
