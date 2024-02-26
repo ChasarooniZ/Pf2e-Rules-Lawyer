@@ -8,7 +8,7 @@ Hooks.once('ready', function () {
             const anchor = getAnchor(position);
             const uiOffset = getUIOffset(position)
             const offset = getBaseOffset(position);
-            const vidFile = 'modules/pf2e-rules-lawyer/resources/every-plus-one-extra.webm';
+            const vidFile = 'modules/pf2e-rules-lawyer/resources/+1matters.webm';
             const sfxFile = 'modules/pf2e-rules-lawyer/resources/rules-lawyer-sfx.ogg';
             const volume = game.settings.get("pf2e-rules-lawyer", "volume") / 100;
             const userXOffset = game.settings.get("pf2e-rules-lawyer", "offset.x");
