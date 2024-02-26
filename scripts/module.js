@@ -4,24 +4,25 @@ Hooks.once('ready', function () {
         if (!game.settings.get("pf2e-rules-lawyer", "enabled")) return;
         const sigMods = ["ESSENTIAL", "HELPFUL", "HARMFUL", "DETRIMENTAL"];
         if (data?.significantModifiers.some(mod => sigMods.includes(mod.significance))) {
-            const position = "bot-right";
+            const position = game.settings.get("pf2e-rules-lawyer", "position");
             const anchor = getAnchor(position);
             const uiOffset = getUIOffset(position)
+            const offset = getBaseOffset(position);
             const vidFile = 'modules/pf2e-rules-lawyer/resources/every-plus-one-extra.webm';
             const sfxFile = 'modules/pf2e-rules-lawyer/resources/rules-lawyer-sfx.ogg';
-            const volume = 0.5;
-            const xOffset = game.settings.get("pf2e-rules-lawyer", "offset.x");
-            const yOffset = game.settings.get("pf2e-rules-lawyer", "offset.y");
-            const duration = 5000;
-            const fadeOutDuration = 1000;
-            const scale = 1/3;
+            const volume = game.settings.get("pf2e-rules-lawyer", "volume") / 100;
+            const userXOffset = game.settings.get("pf2e-rules-lawyer", "offset.x");
+            const userYOffset = game.settings.get("pf2e-rules-lawyer", "offset.y");
+            const duration = game.settings.get("pf2e-rules-lawyer", "duration") * 1000;
+            const fadeOutDuration = duration/5;
+            const scale = 1/3 * game.settings.get("pf2e-rules-lawyer", "scale");
             new Sequence()
                 .effect()
                 .file(vidFile)
                 .screenSpace()
                 .screenSpaceAnchor(anchor)
                 .screenSpaceAboveUI()
-                .screenSpacePosition({ x:xOffset + uiOffset, y: yOffset })
+                .screenSpacePosition({ x:userXOffset + uiOffset + offset.x, y: userYOffset + offset.y })
                 .duration(duration)
                 .fadeOut(fadeOutDuration)
                 .scale(scale)
@@ -67,5 +68,20 @@ function getUIOffset(position) {
             $('.chat-sidebar').width();
         default:
             return 0;
+    }
+}
+
+function getBaseOffset(position) {
+    switch (position) {
+        case 'bot-left':
+            return { x: 200, y: -100 }
+        case 'bot-right':
+            return { x: -180, y: -40 }
+        case 'top-left':
+            return { x: 100, y: 60 }
+        case 'top-right':
+            return { x: -240, y: 50 }
+        default:
+            return { x: 0, y: 0 }
     }
 }

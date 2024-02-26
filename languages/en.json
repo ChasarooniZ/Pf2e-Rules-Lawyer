@@ -10,10 +10,10 @@
                 "name": "Enable Module",
                 "hint": "Enables functionality of module",
                 "choices": {
-                    "top-left": "Top Left",
-                    "top-right": "Top Right",
-                    "bot-left": "Bottom Left",
-                    "bot-right": "Bottom Right"
+                    "top-left": "↖ Top Left",
+                    "top-right": "↗ Top Right",
+                    "bot-left": "↙ Bottom Left",
+                    "bot-right": "↘ Bottom Right"
                 }
             },
             "offset": {
@@ -25,6 +25,18 @@
                     "name": "Y Offset",
                     "hint": "Offset in Y axis"
                 }
+            },
+            "duration": {
+                "name": "Duration",
+                "hint": "Duration to show the pop up in seconds (max 10)"
+            },
+            "scale": {
+                "name": "Scale",
+                "hint": "How much to scale the pop up (1 = default size) Will need to adjust offset to keep in view"
+            },
+            "volume": {
+                "name": "Volume",
+                "hint": "Volume of the SFX"
             }
         }
     }
