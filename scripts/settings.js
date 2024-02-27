@@ -31,7 +31,7 @@ Hooks.on("init", () => {
     game.settings.register("pf2e-rules-lawyer", "player.offset.x", {
         name: game.i18n.localize("pf2e-rules-lawyer.module-settings.player.offset.x.name"),
         hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.player.offset.x.hint"),
-        scope: "world",
+        scope: "client",
         config: true,
         default: 0,
         type: Number,
@@ -40,7 +40,7 @@ Hooks.on("init", () => {
     game.settings.register("pf2e-rules-lawyer", "player.offset.y", {
         name: game.i18n.localize("pf2e-rules-lawyer.module-settings.player.offset.y.name"),
         hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.player.offset.y.hint"),
-        scope: "world",
+        scope: "client",
         config: true,
         default: 0,
         type: Number,
@@ -73,7 +73,7 @@ Hooks.on("init", () => {
     game.settings.register("pf2e-rules-lawyer", "player.scale", {
         name: game.i18n.localize("pf2e-rules-lawyer.module-settings.player.scale.name"),
         hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.player.scale.hint"),
-        scope: "world",
+        scope: "client",
         config: true,
         default: 1,
         type: Number,
