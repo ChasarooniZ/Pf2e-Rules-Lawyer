@@ -27,6 +27,24 @@ Hooks.on("init", () => {
         default: 0,
         type: Number,
     });
+
+    game.settings.register("pf2e-rules-lawyer", "player.offset.x", {
+        name: game.i18n.localize("pf2e-rules-lawyer.module-settings.player.offset.x.name"),
+        hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.player.offset.x.hint"),
+        scope: "world",
+        config: true,
+        default: 0,
+        type: Number,
+    });
+
+    game.settings.register("pf2e-rules-lawyer", "player.offset.y", {
+        name: game.i18n.localize("pf2e-rules-lawyer.module-settings.player.offset.y.name"),
+        hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.player.offset.y.hint"),
+        scope: "world",
+        config: true,
+        default: 0,
+        type: Number,
+    });
     
     game.settings.register("pf2e-rules-lawyer", "position", {
         name: game.i18n.localize("pf2e-rules-lawyer.module-settings.position.name"),
@@ -46,6 +64,15 @@ Hooks.on("init", () => {
     game.settings.register("pf2e-rules-lawyer", "scale", {
         name: game.i18n.localize("pf2e-rules-lawyer.module-settings.scale.name"),
         hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.scale.hint"),
+        scope: "world",
+        config: true,
+        default: 1,
+        type: Number,
+    });
+    
+    game.settings.register("pf2e-rules-lawyer", "player.scale", {
+        name: game.i18n.localize("pf2e-rules-lawyer.module-settings.player.scale.name"),
+        hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.player.scale.hint"),
         scope: "world",
         config: true,
         default: 1,

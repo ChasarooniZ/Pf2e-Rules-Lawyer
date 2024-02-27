@@ -16,6 +16,23 @@
                     "bot-right": "↘ Bottom Right"
                 }
             },
+            "user": {
+                "offset": {
+                    "x": {
+                        "name": "User X Offset",
+                        "hint": "Offset in X axis (For you)"
+                    },
+                    "y": {
+                        "name": "User Y Offset",
+                        "hint": "Offset in Y axis (For you)"
+                    }
+                },
+                "scale": {
+                    "name": "User Scale",
+                    "hint": "How much to scale the pop up (For you) (1 = default size) Will need to adjust offset to keep in view"
+                }
+
+            },
             "offset": {
                 "x": {
                     "name": "X Offset",
