@@ -16,7 +16,7 @@
                     "bot-right": "↘ Bottom Right"
                 }
             },
-            "user": {
+            "player": {
                 "offset": {
                     "x": {
                         "name": "User X Offset",
