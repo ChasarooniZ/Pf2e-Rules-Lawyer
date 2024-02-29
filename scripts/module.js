@@ -2,6 +2,7 @@ Hooks.once('ready', function () {
     Hooks.on('modifiersMatter', (data) => {
         //console.log({ modifiers: data })
         if (!game.settings.get("pf2e-rules-lawyer", "enabled")) return;
+        debugLog(data)
         const position = game.settings.get("pf2e-rules-lawyer", "position");
         const anchor = getAnchor(position);
         const uiOffset = getUIOffset(position)
@@ -89,4 +90,9 @@ function getBaseOffset(position) {
         default:
             return { x: 0, y: 0 }
     }
+}
+
+export function debugLog(data, context = "") {
+    if (game.settings.get("pf2e-rules-lawyer", 'debug'))
+        console.log(`PF2E-Rules-Lawyer${context || "[" + context + "]"}:`, data);
 }

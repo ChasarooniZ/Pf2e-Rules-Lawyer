@@ -58,6 +58,10 @@
             "volume": {
                 "name": "Volume",
                 "hint": "Volume of the SFX"
+            },
+            "debug": {
+                "name": "Enable Debug",
+                "hint": "Enable debug logging features to send info to chat"
             }
         }
     }
