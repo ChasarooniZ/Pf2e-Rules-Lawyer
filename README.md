@@ -8,5 +8,7 @@
 
 # PF2e: Rules Lawyer
 A module that shows the Rules Lawyer Every +1 matters for Modifiers matter, when they do be mattering.
+![+1sMatter](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/assets/79132112/1063ac43-3668-4079-80d8-c551166ef26e)
 
+## Credits
 Credit to [Ronald the Rules Lawyer](https://www.youtube.com/@TheRulesLawyerRPG) and to **/u/DombleBuilds** for making this animation + sfx !
