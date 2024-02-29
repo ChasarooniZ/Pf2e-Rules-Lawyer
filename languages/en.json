@@ -47,6 +47,10 @@
                 "name": "Duration",
                 "hint": "Duration to show the pop up in seconds (max 10)"
             },
+            "delay": {
+                "name": "Delay",
+                "hint": "How long to delay after the chat message appears before showing the effect"
+            },
             "scale": {
                 "name": "Scale",
                 "hint": "How much to scale the pop up (1 = default size) Will need to adjust offset to keep in view"

@@ -79,12 +79,12 @@ Hooks.on("init", () => {
         type: Number,
     });
 
-    game.settings.register("pf2e-rules-lawyer", "duration", {
-        name: game.i18n.localize("pf2e-rules-lawyer.module-settings.duration.name"),
-        hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.duration.hint"),
+    game.settings.register("pf2e-rules-lawyer", "delay", {
+        name: game.i18n.localize("pf2e-rules-lawyer.module-settings.delay.name"),
+        hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.delay.hint"),
         scope: "world",
         config: true,
-        default: 1,
+        default: 2,
         type: Number,
     });
 

@@ -15,6 +15,7 @@ Hooks.once('ready', function () {
         const userYOffset = game.settings.get("pf2e-rules-lawyer", "offset.y");
         const duration = game.settings.get("pf2e-rules-lawyer", "duration") * 1000;
         const fadeOutDuration = duration / 5;
+        const delay = game.settings.get("pf2e-rules-lawyer", "delay") * 1000;
         const scale = 1 / 3 * game.settings.get("pf2e-rules-lawyer", "scale") * game.settings.get("pf2e-rules-lawyer", "player.scale");
         new Sequence()
             .effect()
@@ -29,12 +30,14 @@ Hooks.once('ready', function () {
             .duration(duration)
             .fadeOut(fadeOutDuration)
             .scale(scale)
+            .delay(delay)
             .forUsers(data?.chatMessage?.whisper ?? [...game.users.keys()])
             .sound()
             .file(sfxFile)
             .volume(volume)
             .duration(duration)
             .fadeOutAudio(fadeOutDuration)
+            .delay(delay)
             .forUsers(data?.chatMessage?.whisper ?? [...game.users.keys()])
             .play()
     })
