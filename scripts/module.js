@@ -7,7 +7,7 @@ Hooks.once('ready', function () {
         let vidFile = 'modules/pf2e-rules-lawyer/resources/+1matters.webm';
         let sfxFile = 'modules/pf2e-rules-lawyer/resources/rules-lawyer-sfx.ogg';
         if (harmHelp === "HARMFUL") {
-            const harmful_option = game.settings.get("pf2e-rules-lawyer", "harmful-option");
+            const harmful_option = game.settings.get("pf2e-rules-lawyer", "harmful-options");
             switch (harmful_option) {
                 case 'none':
                     return;
