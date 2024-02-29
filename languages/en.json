@@ -6,6 +6,17 @@
                 "name": "Enable Module",
                 "hint": "Enables functionality of module"
             },
+            "harmful-options": {
+                "name": "Harmful +1s Mattering",
+                "hint": "How to handle when a +1 matters in a bad way (IE helps an enemy or neutral party)",
+                "choices": {
+                    "normal": "Treat Normally",
+                    "none": "Don't Show",
+                    "alt-sound": "Use alt. Sound",
+                    "alt-image": "Use alt. Pop Up",
+                    "alt-sound-image": "use alt. Sound & Pop Up"
+                }
+            },
             "position": {
                 "name": "Enable Module",
                 "hint": "Enables functionality of module",
@@ -49,7 +60,7 @@
             },
             "delay": {
                 "name": "Delay",
-                "hint": "How long to delay after the chat message appears before showing the effect"
+                "hint": "How long to delay after the chat message appears before showing the effect in seconds"
             },
             "scale": {
                 "name": "Scale",

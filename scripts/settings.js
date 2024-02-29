@@ -10,6 +10,23 @@ Hooks.on("init", () => {
         type: Boolean,
     });
 
+    
+    game.settings.register("pf2e-rules-lawyer", "harmful-options", {
+        name: game.i18n.localize("pf2e-rules-lawyer.module-settings.harmful-options.name"),
+        hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.harmful-options.hint"),
+        scope: "world",
+        config: true,
+        default: "bot-right",
+        type: String,
+        choices: {
+            ["normal"]: game.i18n.localize("pf2e-rules-lawyer.module-settings.harmful-options.choices.normal"),
+            ["none"]: game.i18n.localize("pf2e-rules-lawyer.module-settings.harmful-options.choices.none"),
+            ["alt-sound"]: game.i18n.localize("pf2e-rules-lawyer.module-settings.harmful-options.choices.alt-sound"),
+            ["alt-image"]: game.i18n.localize("pf2e-rules-lawyer.module-settings.harmful-options.choices.alt-image"),
+            ["alt-sound-image"]: game.i18n.localize("pf2e-rules-lawyer.module-settings.harmful-options.choices.alt-sound-image"),
+        }
+    });
+
     game.settings.register("pf2e-rules-lawyer", "offset.x", {
         name: game.i18n.localize("pf2e-rules-lawyer.module-settings.offset.x.name"),
         hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.offset.x.hint"),
@@ -84,7 +101,12 @@ Hooks.on("init", () => {
         hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.delay.hint"),
         scope: "world",
         config: true,
-        default: 2,
+        default: 1,
+        range: {
+            min: 0,
+            max: 10,
+            step: 0.1
+        },
         type: Number,
     });
 
@@ -94,6 +116,11 @@ Hooks.on("init", () => {
         scope: "world",
         config: true,
         default: 5,
+        range: {
+            min: 0,
+            max: 10,
+            step: 0.1
+        },
         type: Number,
     });
 

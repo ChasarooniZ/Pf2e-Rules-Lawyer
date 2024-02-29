@@ -2,13 +2,35 @@ Hooks.once('ready', function () {
     Hooks.on('modifiersMatter', (data) => {
         //console.log({ modifiers: data })
         if (!game.settings.get("pf2e-rules-lawyer", "enabled")) return;
-        debugLog(data)
+        const harmHelp = isHelpfulOrHarmful(data);
+        debugLog({ data, harmHelp })
+        let vidFile = 'modules/pf2e-rules-lawyer/resources/+1matters.webm';
+        let sfxFile = 'modules/pf2e-rules-lawyer/resources/rules-lawyer-sfx.ogg';
+        if (harmHelp === "HARMFUL") {
+            const harmful_option = game.settings.get("pf2e-rules-lawyer", "harmful-option");
+            switch (harmful_option) {
+                case 'none':
+                    return;
+                case 'normal':
+                    break;
+                case 'alt-sound':
+                    sfxFile = 'modules/pf2e-rules-lawyer/resources/evil-rules-lawyer-sfx-reverb.ogg'
+                    break;
+                case 'alt-image':
+                    vidFile = 'modules/pf2e-rules-lawyer/resources/+1matters-evil.webm';
+                    break;
+                case 'alt-sound-image':
+                    vidFile = 'modules/pf2e-rules-lawyer/resources/+1matters-evil.webm';
+                    sfxFile = 'modules/pf2e-rules-lawyer/resources/evil-rules-lawyer-sfx-reverb.ogg'
+                    break;
+                default:
+                    return;
+            }
+        }
         const position = game.settings.get("pf2e-rules-lawyer", "position");
         const anchor = getAnchor(position);
         const uiOffset = getUIOffset(position)
         const offset = getBaseOffset(position);
-        const vidFile = 'modules/pf2e-rules-lawyer/resources/+1matters.webm';
-        const sfxFile = 'modules/pf2e-rules-lawyer/resources/rules-lawyer-sfx.ogg';
         const volume = game.settings.get("pf2e-rules-lawyer", "volume") / 100;
         const worldXOffset = game.settings.get("pf2e-rules-lawyer", "offset.x");
         const worldYOffset = game.settings.get("pf2e-rules-lawyer", "offset.y");
@@ -92,7 +114,18 @@ function getBaseOffset(position) {
     }
 }
 
+function isHelpfulOrHarmful(data) {
+    const relevantSignificance = [];
+    const isRollerGood = data.rollingActor.alliance === "party";
+    const isDCGood = data.actorWithDc.alliance === "party";
+    if (isRollerGood)
+        relevantSignificance.push("ESSENTIAL")
+    if (isDCGood)
+        relevantSignificance.push("HARMFUL")
+    return data.significantModifiers.some(mod => relevantSignificance.includes(mod.significance)) ? "HELPFUL" : "HARMFUL"
+}
+
 export function debugLog(data, context = "") {
     if (game.settings.get("pf2e-rules-lawyer", 'debug'))
-        console.log(`PF2E-Rules-Lawyer${context || "[" + context + "]"}:`, data);
+        console.log(`PF2E-Rules-Lawyer${context ? "[" + context + "]" : ""}:`, data);
 }
