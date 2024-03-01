@@ -1,3 +1,21 @@
+## 11.2.0 Official Launch + Evil Ronald
+- This release marks the official launch after getting approval!
+- **Harmful +1s** (Requested by @ronaldsf)
+  - Added options to choose how to handle when +1s matter not in favor of a party member
+  - Options are as follows:
+    - `Treat Normally` - Show as normal +1s Mattering
+    - `Don't Show` - Don't show when it benefits not the party
+    - `Use Alt Sound` - Uses alternative "evil" sound
+    - `Use Alt Pop up` - Uses alternative "evil" ronald pop up
+    - `Use Alt Pop up` - Uses alternative "evil" sound + ronald pop up
+- **Delay** (Requested by @ronaldsf)
+  - Added option to add a delay to when the effect appears after creating the chat message
+- **Debug Mode**
+  - Added debug option to give more information on what's happening
+- **Updated Visuals**
+  - Updated the videos to be a higher quality background removal (got better at removing)
+- **Bug Fixes**
+  - Fixed some of the options tooltips not being as clear
 ## 11.1.1 User Settings + Optimizations
 - Added User settings for the following so each person can adjust as desired
   - `Offset X`

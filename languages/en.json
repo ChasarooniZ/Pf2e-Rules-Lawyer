@@ -12,9 +12,9 @@
                 "choices": {
                     "normal": "Treat Normally",
                     "none": "Don't Show",
-                    "alt-sound": "Use alt. Sound",
-                    "alt-image": "Use alt. Pop Up",
-                    "alt-sound-image": "Use alt. Sound & Pop Up"
+                    "alt-sound": "Alt Sound",
+                    "alt-image": "Alt Pop Up",
+                    "alt-sound-image": "Alt Sound & Pop Up"
                 }
             },
             "position": {
