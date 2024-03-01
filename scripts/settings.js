@@ -16,7 +16,7 @@ Hooks.on("init", () => {
         hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.harmful-options.hint"),
         scope: "world",
         config: true,
-        default: "bot-right",
+        default: "alt-sound-image",
         type: String,
         choices: {
             ["normal"]: game.i18n.localize("pf2e-rules-lawyer.module-settings.harmful-options.choices.normal"),
