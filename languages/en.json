@@ -18,8 +18,8 @@
                 }
             },
             "position": {
-                "name": "Enable Module",
-                "hint": "Enables functionality of module",
+                "name": "Position",
+                "hint": "What part of the screen should the pop up appear",
                 "choices": {
                     "top-left": "↖ Top Left",
                     "top-right": "↗ Top Right",
