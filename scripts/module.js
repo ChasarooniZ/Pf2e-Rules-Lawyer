@@ -12,11 +12,10 @@ Hooks.once("ready", function () {
       const effectData = {
         vid: data.evil ? RULES_LAWYER_EVIL_VID : RULES_LAWYER_VID,
         sfx: data.evil ? RULES_LAWYER_EVIL_SFX : RULES_LAWYER_SFX,
-        whisper: whisper,
       };
       createRulesLawyerEffect(
         effectData.vid,
-        { chatMessage: { whisper: effectData.whisper } },
+        { chatMessage: { whisper } },
         effectData.sfx
       );
     },
