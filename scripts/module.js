@@ -10,8 +10,8 @@ Hooks.once("ready", function () {
   game.rulesLawyer = {
     create: function (evil = false) {
       const effectData = {
-        vid: data.evil ? RULES_LAWYER_EVIL_VID : RULES_LAWYER_VID,
-        sfx: data.evil ? RULES_LAWYER_EVIL_SFX : RULES_LAWYER_SFX,
+        vid: evil ? RULES_LAWYER_EVIL_VID : RULES_LAWYER_VID,
+        sfx: evil ? RULES_LAWYER_EVIL_SFX : RULES_LAWYER_SFX,
       };
       createRulesLawyerEffect(
         effectData.vid,
