@@ -1,3 +1,13 @@
+## 11.3.0 Ronald's Rules of Aiding
+- Added new Compenmdium `Rules Lawyer Item Patches` that includes updated `Aid` and `Effect: Aid`
+- Rules based on [this video](https://www.youtube.com/watch?v=pvYzD7Bna60)
+- As follows changes are
+  - DC = DC of check you are aiding
+  - New Result States
+    -  **Crit Succ** +4 Circumstance Bonus
+    -  **Succ** +2 Circumstance Bonus
+    -  **Fail** +1 Circumstance Bonus
+    -  **Crit Fail** -1 Circumstance Bonus
 ## 11.2.0 Official Launch + Evil Ronald
 - This release marks the official launch after getting approval!
 - **Harmful +1s** (Suggested by @ronaldsf)
