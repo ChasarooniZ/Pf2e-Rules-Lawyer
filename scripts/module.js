@@ -67,14 +67,13 @@ function createRulesLawyerEffect(vidFile, data, sfxFile) {
   const videoWidth = 1104;
   const videoHeight = 300;
   const windowWidth = window.screen.availWidth;
-  const desiredWindowScale = 20; //in %
+  const desiredWindowScale = 40; //in %
   const videoScale = (windowWidth * (desiredWindowScale / 100)) / videoWidth;
 
   // Settings
   const position = getSetting("position");
   const anchor = getAnchor(position);
   const uiOffset = getUIOffset(position);
-  const offset = getBaseOffset(position);
   const volume = getSetting("volume") / 100;
   const worldXOffset = getSetting("offset.x");
   const worldYOffset = getSetting("offset.y");
@@ -85,8 +84,8 @@ function createRulesLawyerEffect(vidFile, data, sfxFile) {
   const delay = getSetting("delay") * 1000;
   const scale = videoScale * getSetting("scale") * getSetting("player.scale");
   const imgOffset = {
-    x: scale * videoWidth * getImageOffset(position).x,
-    y: scale * videoHeight * getImageOffset(position).y,
+    x: scale * videoWidth * getImageOffset(position).x * 0.74,
+    y: scale * videoHeight * getImageOffset(position).y * 0.73,
   };
 
   // Create effect sequence
@@ -97,8 +96,8 @@ function createRulesLawyerEffect(vidFile, data, sfxFile) {
     .screenSpaceAnchor(anchor)
     .screenSpaceAboveUI()
     .screenSpacePosition({
-      x: worldXOffset + uiOffset + userXOffset + imgOffset.x + offset.x,
-      y: worldYOffset + userYOffset + imgOffset.y + offset.y,
+      x: worldXOffset + uiOffset + userXOffset + imgOffset.x,
+      y: worldYOffset + userYOffset + imgOffset.y,
     })
     .duration(duration)
     .fadeOut(fadeOutDuration)
@@ -157,21 +156,6 @@ function getUIOffset(position) {
       return -$(".chat-sidebar").width();
     default:
       return 0;
-  }
-}
-
-function getBaseOffset(position) {
-  switch (position) {
-    case "bot-left":
-      return { x: 0, y: 0 };
-    case "bot-right":
-      return { x: 0, y: 0 };
-    case "top-left":
-      return { x: 0, y: 0 };
-    case "top-right":
-      return { x: 0, y: 0 };
-    default:
-      return { x: 0, y: 0 };
   }
 }
 
