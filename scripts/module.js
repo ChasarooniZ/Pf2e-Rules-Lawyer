@@ -8,14 +8,14 @@ import { getSetting } from "./helpers.js";
 
 Hooks.once("ready", function () {
   game.rulesLawyer = {
-    create: function (data = { whisper: null, evil: false }) {
+    create: function (evil = false) {
       const effectData = {
         vid: data.evil ? RULES_LAWYER_EVIL_VID : RULES_LAWYER_VID,
         sfx: data.evil ? RULES_LAWYER_EVIL_SFX : RULES_LAWYER_SFX,
       };
       createRulesLawyerEffect(
         effectData.vid,
-        { chatMessage: { whisper } },
+        [...game.users.keys()],
         effectData.sfx
       );
     },
