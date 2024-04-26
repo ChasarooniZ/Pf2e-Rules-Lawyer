@@ -134,7 +134,7 @@ function getImageOffset(position) {
     case "bot-left":
       return { x: 0.27, y: -0.49 };
     case "bot-right":
-      return { x: -.24, y: -.23 };
+      return { x: -0.24, y: -0.23 };
     case "top-left":
       return { x: 0.15, y: 0.26 };
     case "top-right":
@@ -163,8 +163,13 @@ function isHelpfulOrHarmful(data) {
   const relevantSignificance = [];
   const isRollerGood = data.rollingActor.alliance === "party";
   const isDCGood = data.actorWithDc.alliance === "party";
+  const isAttack =
+    data.chatMessage?.flags?.pf2e?.context?.type === "attack-roll";
   if (isRollerGood) relevantSignificance.push("ESSENTIAL");
-  if (isDCGood) relevantSignificance.push("HARMFUL");
+  if (isDCGood)
+    isAttack
+      ? relevantSignificance.push("HARMFUL")
+      : relevantSignificance.push("ESSENTIAL");
   return data.significantModifiers.some((mod) =>
     relevantSignificance.includes(mod.significance)
   )
