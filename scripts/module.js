@@ -66,9 +66,8 @@ function createRulesLawyerEffect(vidFile, data, sfxFile) {
   // Constants
   const videoWidth = 1104;
   const videoHeight = 300;
-  const windowWidth = window.screen.availWidth;
-  const desiredWindowScale = 40; //in %
-  const videoScale = (windowWidth * (desiredWindowScale / 100)) / videoWidth;
+  const desiredWindowScale = 20; //in %
+  const videoScale = desiredWindowScale / 100;
 
   // Settings
   const position = getSetting("position");
@@ -101,7 +100,12 @@ function createRulesLawyerEffect(vidFile, data, sfxFile) {
     })
     .duration(duration)
     .fadeOut(fadeOutDuration)
-    .scale(scale)
+    .screenSpaceScale({
+      x: scale,
+      y: scale,
+      fitX: true,
+      ratioY: true,
+    })
     .delay(delay)
     .forUsers(data?.chatMessage?.whisper ?? [...game.users.keys()]) // Whisper to specified users or all users
     .sound()
