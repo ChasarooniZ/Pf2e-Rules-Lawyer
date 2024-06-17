@@ -1,3 +1,13 @@
+## 12.0.0 V12 Support
+- Now supports Fvtt `v12` and relevant module upgrades (Sequencer+ modifiers matters)
+- Changes
+  - Added an API, can be called like so:
+    - `game.rulesLawyer`
+       - `create(evil: Boolean)` if evil is true play evil rules lawyer FX, otherwise play the normal one
+    - Should help for anyone who wants do the effect manually
+  - Positioning + Sizing changes
+    - Made some misc. positioning/sizing changes as I realized I was basing the size of the effect based on who triggered it's browser size
+    - Not Fully finished, will probably update it once more when I get around to thinking about it
 ## 11.3.0 Ronald's Rules of Aiding
 - Added new Compenmdium `Rules Lawyer Item Patches` that includes updated `Aid` and `Effect: Aid`
 - Rules based on [this video](https://www.youtube.com/watch?v=pvYzD7Bna60)
