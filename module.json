@@ -1,65 +1,88 @@
 {
-    "id": "pf2e-rules-lawyer",
-    "title": "PF2e Rules Lawyer",
-    "description": "A FAN module inspired by the rules Lawyer that shows off his iconic +1s Matter",
-    "version": "#{VERSION}#",
-    "compatibility": {
-        "minimum": "10",
-        "verified": "11"
-    },
-    "authors": [{
-        "name": "chasarooniZ"
-    }],
-    "relationships": {
-        "systems": [{
-            "id": "pf2e",
-            "type": "system",
-            "compatibility": {
-                "minimum": "5.2.1",
-                "verified": "5.3.0"
-            }
-        }],
-        "requires": [{
-                "id": "sequencer",
-                "type": "module",
-                "compatibility": {
-                    "minimum": "3.0.0",
-                    "verified": "3.1.2"
-                }
-            },
-            {
-                "id": "pf2e-modifiers-matter",
-                "type": "module",
-                "compatibility": {
-                    "minimum": "1.8.0",
-                    "verified": "1.8.8"
-                }
-            }
-        ]
-    },
-    "esmodules": [
-        "scripts/module.js",
-        "scripts/settings.js"
+  "id": "pf2e-rules-lawyer",
+  "title": "PF2e Rules Lawyer",
+  "description": "A FAN module inspired by the rules Lawyer that shows off his iconic +1s Matter",
+  "version": "#{VERSION}#",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "11"
+  },
+  "authors": [
+    {
+      "name": "chasarooniZ"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.2.1",
+          "verified": "5.3.0"
+        }
+      }
     ],
-    "languages": [{
-        "lang": "en",
-        "name": "English",
-        "path": "languages/en.json"
-    }],
-    "packs": [{
-        "name": "rules-lawyer-patched-items",
-        "label": "Rules Lawyer Patched Items",
-        "path": "packs/rules-lawyer-patched-items",
-        "type": "Item",
-        "ownership": {
-            "PLAYER": "OBSERVER",
-            "ASSISTANT": "OWNER"
-        },
-        "system": "pf2e",
-        "flags": {}
-    }],
-    "url": "#{URL}#",
-    "manifest": "#{MANIFEST}#",
-    "download": "#{DOWNLOAD}#",
-    "readme": "https://github.com/chasarooniZ/pf2e-rules-lawyer/blob/master/README.md"
+    "requires": [
+      {
+        "id": "sequencer",
+        "type": "module",
+        "compatibility": {
+          "minimum": "3.0.0",
+          "verified": "3.1.2"
+        }
+      },
+      {
+        "id": "pf2e-modifiers-matter",
+        "type": "module",
+        "compatibility": {
+          "minimum": "1.8.0",
+          "verified": "1.8.8"
+        }
+      },
+      {
+        "id": "socketlib",
+        "type": "module",
+        "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json"
+      }
+    ]
+  },
+  "esmodules": ["scripts/module.js", "scripts/settings.js"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "rules-lawyer-patched-items",
+      "label": "Rules Lawyer Patched Items",
+      "path": "packs/rules-lawyer-patched-items",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pf2e",
+      "flags": {}
+    },
+    {
+      "name": "rules-lawyer-macros",
+      "label": "Rules Lawyer Macros",
+      "path": "packs/rules-lawyer-macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pf2e",
+      "flags": {}
+    }
+  ],
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#",
+  "readme": "https://github.com/chasarooniZ/pf2e-rules-lawyer/blob/master/README.md"
 }

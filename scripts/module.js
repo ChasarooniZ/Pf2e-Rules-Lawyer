@@ -1,3 +1,4 @@
+import { aid } from "./addons/aid.js";
 import {
   RULES_LAWYER_EVIL_SFX,
   RULES_LAWYER_EVIL_VID,
@@ -19,6 +20,9 @@ Hooks.once("ready", function () {
         effectData.sfx
       );
     },
+    aid: function() {
+      aid()
+    }
   };
   Hooks.on("modifiersMatter", (data) => {
     //console.log({ modifiers: data })
