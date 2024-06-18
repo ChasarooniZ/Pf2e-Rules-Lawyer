@@ -11,15 +11,10 @@ async function createEffects(data) {
   }
   await actor.createEmbeddedDocuments("Item", [source]);
 }
-const setupSocket = () => {
+export const setupSocket = () => {
   if (globalThis.socketlib) {
     socketlibSocket = globalThis.socketlib.registerModule("pf2e-rules-lawyer");
     socketlibSocket.register("createEffects", createEffects);
   }
   return !!globalThis.socketlib;
 };
-
-Hooks.once("setup", function () {
-  if (!setupSocket())
-    console.error("Error: Unable to set up socket lib for PF2e Rules Lawyer");
-});

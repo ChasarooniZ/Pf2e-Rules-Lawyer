@@ -1,4 +1,5 @@
 import { aid } from "./addons/aid.js";
+import { setupSocket } from "./addons/socket.js";
 import {
   RULES_LAWYER_EVIL_SFX,
   RULES_LAWYER_EVIL_VID,
@@ -6,6 +7,11 @@ import {
   RULES_LAWYER_VID,
 } from "./constants.js";
 import { getSetting } from "./helpers.js";
+
+Hooks.once("setup", function () {
+  if (!setupSocket())
+    console.error("Error: Unable to set up socket lib for PF2e Rules Lawyer");
+});
 
 Hooks.once("ready", function () {
   game.rulesLawyer = {
@@ -20,9 +26,9 @@ Hooks.once("ready", function () {
         effectData.sfx
       );
     },
-    aid: function() {
-      aid()
-    }
+    aid: function () {
+      aid();
+    },
   };
   Hooks.on("modifiersMatter", (data) => {
     //console.log({ modifiers: data })
