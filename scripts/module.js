@@ -63,6 +63,15 @@ Hooks.once("ready", function () {
     }
     createRulesLawyerEffect(vidFile, data, sfxFile);
   });
+  Hooks.on("createChatMessage", async function (msg, _status, userid) {
+    if (
+      game.user.id === userid &&
+      getSetting("aid.on-action.enable") &&
+      ["aid", "aid-ronalds"].includes(msg.item.slug)
+    ) {
+      aid();
+    }
+  });
 });
 
 /**

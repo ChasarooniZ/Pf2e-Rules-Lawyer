@@ -1,6 +1,4 @@
 Hooks.on("init", () => {
-    const debouncedReload = foundry.utils.debounce(() => window.location.reload(), 100);
-
     game.settings.register("pf2e-rules-lawyer", "enabled", {
         name: game.i18n.localize("pf2e-rules-lawyer.module-settings.enabled.name"),
         hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.enabled.hint"),
@@ -137,6 +135,16 @@ Hooks.on("init", () => {
         },
         type: Number,
     });
+
+    game.settings.register("pf2e-rules-lawyer", "aid.on-action.enable", {
+        name: game.i18n.localize("pf2e-rules-lawyer.module-settings.aid.on-action.enable.name"),
+        hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.aid.on-action.enable.hint"),
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean,
+    });
+
     game.settings.register("pf2e-rules-lawyer", "debug", {
         name: game.i18n.localize("pf2e-rules-lawyer.module-settings.debug.name"),
         hint: game.i18n.localize("pf2e-rules-lawyer.module-settings.debug.hint"),

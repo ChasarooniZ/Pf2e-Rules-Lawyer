@@ -1,79 +1,86 @@
 {
-    "I18N.LANGUAGE": "English",
-    "pf2e-rules-lawyer": {
-        "module-settings": {
-            "enabled": {
-                "name": "Enable Module",
-                "hint": "Enables functionality of module"
-            },
-            "harmful-options": {
-                "name": "Harmful +1s Mattering",
-                "hint": "How to handle when a +1 matters in a bad way (IE helps an enemy or neutral party)",
-                "choices": {
-                    "normal": "Treat Normally",
-                    "none": "Don't Show",
-                    "alt-sound": "Alt Sound",
-                    "alt-image": "Alt Pop Up",
-                    "alt-sound-image": "Alt Sound & Pop Up"
-                }
-            },
-            "position": {
-                "name": "Position",
-                "hint": "What part of the screen should the pop up appear",
-                "choices": {
-                    "top-left": "↖ Top Left",
-                    "top-right": "↗ Top Right",
-                    "bot-left": "↙ Bottom Left",
-                    "bot-right": "↘ Bottom Right"
-                }
-            },
-            "player": {
-                "offset": {
-                    "x": {
-                        "name": "User X Offset",
-                        "hint": "Offset in X axis (For you)"
-                    },
-                    "y": {
-                        "name": "User Y Offset",
-                        "hint": "Offset in Y axis (For you)"
-                    }
-                },
-                "scale": {
-                    "name": "User Scale",
-                    "hint": "How much to scale the pop up (For you) (1 = default size) Will need to adjust offset to keep in view"
-                }
-
-            },
-            "offset": {
-                "x": {
-                    "name": "X Offset",
-                    "hint": "Offset in X axis"
-                },
-                "y": {
-                    "name": "Y Offset",
-                    "hint": "Offset in Y axis"
-                }
-            },
-            "duration": {
-                "name": "Duration",
-                "hint": "Duration to show the pop up in seconds (max 10)"
-            },
-            "delay": {
-                "name": "Delay",
-                "hint": "How long to delay after the chat message appears before showing the effect in seconds"
-            },
-            "scale": {
-                "name": "Scale",
-                "hint": "How much to scale the pop up (1 = default size) Will need to adjust offset to keep in view"
-            },
-            "volume": {
-                "name": "Volume",
-                "hint": "Volume of the SFX"
-            },
-            "debug": {
-                "name": "Enable Debug",
-                "hint": "Enable debug logging features to send info to chat"
-            }
+  "I18N.LANGUAGE": "English",
+  "pf2e-rules-lawyer": {
+    "module-settings": {
+      "enabled": {
+        "name": "Enable Module",
+        "hint": "Enables functionality of module"
+      },
+      "harmful-options": {
+        "name": "Harmful +1s Mattering",
+        "hint": "How to handle when a +1 matters in a bad way (IE helps an enemy or neutral party)",
+        "choices": {
+          "normal": "Treat Normally",
+          "none": "Don't Show",
+          "alt-sound": "Alt Sound",
+          "alt-image": "Alt Pop Up",
+          "alt-sound-image": "Alt Sound & Pop Up"
         }
+      },
+      "position": {
+        "name": "Position",
+        "hint": "What part of the screen should the pop up appear",
+        "choices": {
+          "top-left": "↖ Top Left",
+          "top-right": "↗ Top Right",
+          "bot-left": "↙ Bottom Left",
+          "bot-right": "↘ Bottom Right"
+        }
+      },
+      "player": {
+        "offset": {
+          "x": {
+            "name": "User X Offset",
+            "hint": "Offset in X axis (For you)"
+          },
+          "y": {
+            "name": "User Y Offset",
+            "hint": "Offset in Y axis (For you)"
+          }
+        },
+        "scale": {
+          "name": "User Scale",
+          "hint": "How much to scale the pop up (For you) (1 = default size) Will need to adjust offset to keep in view"
+        }
+      },
+      "offset": {
+        "x": {
+          "name": "X Offset",
+          "hint": "Offset in X axis"
+        },
+        "y": {
+          "name": "Y Offset",
+          "hint": "Offset in Y axis"
+        }
+      },
+      "duration": {
+        "name": "Duration",
+        "hint": "Duration to show the pop up in seconds (max 10)"
+      },
+      "delay": {
+        "name": "Delay",
+        "hint": "How long to delay after the chat message appears before showing the effect in seconds"
+      },
+      "scale": {
+        "name": "Scale",
+        "hint": "How much to scale the pop up (1 = default size) Will need to adjust offset to keep in view"
+      },
+      "volume": {
+        "name": "Volume",
+        "hint": "Volume of the SFX"
+      },
+      "aid": {
+        "on-action": {
+          "enable": {
+            "name": "Automatically Run Aid Macro",
+            "hint": "When enabled will run the aid macro whenever you use the aid Action (by sending it to chat)"
+          }
+        }
+      },
+      "debug": {
+        "name": "Enable Debug",
+        "hint": "Enable debug logging features to send info to chat"
+      }
     }
+  }
 }
