@@ -68,6 +68,18 @@
       },
       "system": "pf2e",
       "flags": {}
+    },
+    {
+      "name": "rules-lawyer-macros",
+      "label": "Rules Lawyer Macros",
+      "path": "packs/rules-lawyer-macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pf2e",
+      "flags": {}
     }
   ],
   "url": "#{URL}#",

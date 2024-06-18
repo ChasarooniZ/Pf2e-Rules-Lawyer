@@ -1,4 +1,4 @@
-export function aid() {
+export async function aid() {
   let dc = await Dialog.wait({
     title: "Ronald's Aid Macro",
     content: `
@@ -82,12 +82,10 @@ export function aid() {
     if (targ) {
       const item = await fromUuid(data.uuid);
       const source = item.toObject();
-      socketlib.modules
-        .get("pf2e-rules-lawyer")
-        .executeAsGM("createEffects", {
-          actorUuid: targ.actor.uuid,
-          eff: data.uuid,
-        });
+      socketlib.modules.get("pf2e-rules-lawyer").executeAsGM("createEffects", {
+        actorUuid: targ.actor.uuid,
+        eff: data.uuid,
+      });
       await targ.actor.createEmbeddedDocuments("Item", [source]);
     }
     ChatMessage.create({
