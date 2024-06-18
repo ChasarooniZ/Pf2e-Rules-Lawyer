@@ -38,14 +38,14 @@ export async function aid() {
   hookId = Hooks.on("createChatMessage", waitForAid);
   async function waitForAid(msg, _misc, id) {
     if (id === game.user.id && msg.isCheckRoll) {
+      const rollValue = msg?.rolls?.[0]?.total;
       handleDiceSoNice(
-        (msg, rollValue, dc, token, target, hookId) => {
-          const rollValue = msg?.rolls?.[0]?.total;
+        (rollValue, dc, token, target, hookId) => {
           handleResult(rollValue, dc, token, target);
           console.log({ rollValue, dc });
           Hooks.off("createChatMessage", hookId);
         },
-        [msg, rollValue, dc, token, target, hookId],
+        [rollValue, dc, token, target, hookId],
         msg.id
       );
     }
