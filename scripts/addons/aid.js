@@ -1,3 +1,5 @@
+import { handleDiceSoNice } from "./diceSoNice";
+
 export async function aid() {
   let dc = await Dialog.wait({
     title: "Ronald's Aid Macro",
@@ -36,10 +38,16 @@ export async function aid() {
   hookId = Hooks.on("createChatMessage", waitForAid);
   async function waitForAid(msg, _misc, id) {
     if (id === game.user.id && msg.isCheckRoll) {
-      const rollValue = msg?.rolls?.[0]?.total;
-      handleResult(rollValue, dc, token, target);
-      console.log({ rollValue, dc });
-      Hooks.off("createChatMessage", hookId);
+      handleDiceSoNice(
+        (msg, rollValue, dc, token, target, hookId) => {
+          const rollValue = msg?.rolls?.[0]?.total;
+          handleResult(rollValue, dc, token, target);
+          console.log({ rollValue, dc });
+          Hooks.off("createChatMessage", hookId);
+        },
+        [msg, rollValue, dc, token, target, hookId],
+        msg.id
+      );
     }
   }
 
