@@ -80,13 +80,10 @@ export async function aid() {
         "Compendium.pf2e-rules-lawyer.rules-lawyer-patched-items.Item.bWQKYNvuKi0fPJZG";
     }
     if (targ) {
-      const item = await fromUuid(data.uuid);
-      const source = item.toObject();
       socketlib.modules.get("pf2e-rules-lawyer").executeAsGM("createEffects", {
         actorUuid: targ.actor.uuid,
         eff: data.uuid,
       });
-      await targ.actor.createEmbeddedDocuments("Item", [source]);
     }
     ChatMessage.create({
       content: `<h3>Aid</h3>
