@@ -100,7 +100,8 @@ export async function aid() {
       }</i></p>
         <b>${data.degree}</b> Your ally gets a <b>${
         data.bonus
-      }</b> to their check or attack roll`,
+      }</b> to their check or attack roll
+      <p>@UUID[${data.uuid}]</p>`,
       speaker: ChatMessage.getSpeaker({ token: tok.actor }),
     });
   }
