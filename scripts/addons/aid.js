@@ -42,7 +42,6 @@ export async function aid() {
       handleDiceSoNice(
         (rollValue, dc, token, target, hookId) => {
           handleResult(rollValue, dc, token, target);
-          console.log({ rollValue, dc });
           Hooks.off("createChatMessage", hookId);
         },
         [rollValue, dc, token, target, hookId],
