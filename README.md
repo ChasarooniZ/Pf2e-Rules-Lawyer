@@ -18,6 +18,8 @@ A module that shows the Rules Lawyer Every +1 matters for Modifiers matter, when
 ## +1s Matter Enemy
 ![+1s Matter Enemy Example](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/assets/79132112/d0044a1b-a70f-4a99-9934-b860fc7bdb25)
 
-
+# Ronald's Rules of Aiding Automation
+Aid can be done automatically by using the provided `Ronald's Aid` macro or by enabling the automatically use macro in the settings to allow it to run whenever you use the `aid` action.
+![aid automatically added example](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/assets/79132112/752af4c2-02ea-486f-ab26-ff1a2cd039b2)
 ## Credits
 Credit to [Ronald the Rules Lawyer](https://www.youtube.com/@TheRulesLawyerRPG) and to **/u/DombleBuilds** for making this animation + sfx !
