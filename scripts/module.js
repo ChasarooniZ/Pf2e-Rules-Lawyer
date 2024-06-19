@@ -182,8 +182,8 @@ function getUIOffset(position) {
 
 function isHelpfulOrHarmful(data) {
   const relevantSignificance = [];
-  const isRollerGood = data.rollingActor.alliance === "party";
-  const isDCGood = data.actorWithDc.alliance === "party";
+  const isRollerGood = data?.rollingActor?.alliance === "party";
+  const isDCGood = data?.actorWithDc?.alliance === "party";
   const isAttack =
     data.chatMessage?.flags?.pf2e?.context?.type === "attack-roll";
   if (isRollerGood) relevantSignificance.push("ESSENTIAL");
