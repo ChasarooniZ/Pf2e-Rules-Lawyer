@@ -59,7 +59,7 @@ export async function aid() {
   }
 
   async function handleResult(rollValue, dcVal, tok, targ) {
-    const diff = dcVal - rollValue;
+    const diff = rollValue - dcVal;
     const data = {};
     if (diff >= 10) {
       //Crit Success
