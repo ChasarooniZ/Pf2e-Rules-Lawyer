@@ -7,7 +7,9 @@ async function createEffects(data) {
     core: { sourceId: data.eff },
   });
   if (data.setChoice && data.setChoice?.flag && data.setChoice?.value) {
-    const idx = source.system.rules.indexOf(rule => rule.flag === data.setChoice.flag);
+    const idx = source.system.rules.findIndex(
+      (rule) => rule.flag === data.setChoice.flag
+    );
     source.system.rules[idx].selection = data.setChoice.value;
   }
   if (data.level) {
