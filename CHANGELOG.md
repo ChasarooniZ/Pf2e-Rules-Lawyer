@@ -1,4 +1,19 @@
-## 12.0.0 V12 Support
+## [12.1.0](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.0.0...12.1.0) Ronald's Rules of Aiding
+- **Aid**
+  - Added implementation for [Ronald's Rules of Aiding](https://www.youtube.com/watch?v=pvYzD7Bna60&t=640s)
+  - To use:
+    - *optionally* target an ally and trigger with one of the method's below
+    - Input the DC of the check to aid
+    - You will then receive an effect making your next roll count as an aid check
+    - Make said roll, and then it should automatically apply the aid effect to the targeted ally
+  - Two Options to trigger the automation now exist:
+    - `Automatically Run Aid Macro` setting in module settings
+      - Causes any item with the slug `aid` to trigger the automation
+    - `Ronald's Aid` macro to manually trigger it
+- **Dice So Nice Support**
+  - If you have Dice So Nice enabled, and have the setting to wait for the die to roll to show messages on, this module will now wait for the dice to roll before showing the rules lawyer pop up and the aid result. (can be further modified by the delay feature)
+  - As a result, added `socketlib` as a required supporting module for this module (to enable adding the effect to an ally automatically)
+## [12.0.0](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/11.3.0...12.0.0) V12 Support
 - Now supports Fvtt `v12` and relevant module upgrades (Sequencer+ modifiers matters)
 - Changes
   - Added an API, can be called like so:
