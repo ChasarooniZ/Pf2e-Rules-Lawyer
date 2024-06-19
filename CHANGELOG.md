@@ -1,3 +1,7 @@
+## [12.1.1](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.1.0...12.1.1) Aid Fixup
+- Changed code so it applies aid directly, as opposed to through another effect
+- The option to drag an effect instead is still there though
+  - (if you don't target an ally it won't automatically apply an effect)
 ## [12.1.0](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.0.0...12.1.0) Ronald's Rules of Aiding
 - **Aid**
   - Added implementation for [Ronald's Rules of Aiding](https://www.youtube.com/watch?v=pvYzD7Bna60&t=640s)
@@ -24,7 +28,7 @@
     - Made some misc. positioning/sizing changes as I realized I was basing the size of the effect based on who triggered it's browser size
     - Not Fully finished, will probably update it once more when I get around to thinking about it
 ## 11.3.0 Ronald's Rules of Aiding
-- Added new Compenmdium `Rules Lawyer Item Patches` that includes updated `Aid` and `Effect: Aid`
+- Added new Compendium `Rules Lawyer Item Patches` that includes updated `Aid` and `Effect: Aid`
 - Rules based on [this video](https://www.youtube.com/watch?v=pvYzD7Bna60)
 - As follows changes are
   - DC = DC of check you are aiding
