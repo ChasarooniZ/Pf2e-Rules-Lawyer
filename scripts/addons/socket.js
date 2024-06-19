@@ -6,6 +6,10 @@ async function createEffects(data) {
   source.flags = foundry.utils.mergeObject(source.flags ?? {}, {
     core: { sourceId: data.eff },
   });
+  if (data.setChoice && data.setChoice?.flag && data.setChoice?.value) {
+    const idx = source.system.rules.indexOf(rule => rule.flag === data.setChoice.flag);
+    source.system.rules[idx].selection = data.setChoice.value;
+  }
   if (data.level) {
     source.system.level = { value: data.level };
   }

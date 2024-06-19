@@ -61,6 +61,7 @@ export async function aid() {
   async function handleResult(rollValue, dcVal, tok, targ) {
     const diff = rollValue - dcVal;
     const data = {};
+    const aidUUID = 'Compendium.pf2e.other-effects.Item.AHMUpMbaVkZ5A1KX';
     if (diff >= 10) {
       //Crit Success
       data.degree = "Critical Success";
@@ -89,7 +90,11 @@ export async function aid() {
     if (targ) {
       socketlib.modules.get("pf2e-rules-lawyer").executeAsGM("createEffects", {
         actorUuid: targ.actor.uuid,
-        eff: data.uuid,
+        eff: aidUUID,
+        setChoice: {
+            flag: 'aidBonus',
+            value: Number(data.bonus)
+        }
       });
     }
     ChatMessage.create({
