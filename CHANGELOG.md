@@ -1,3 +1,6 @@
+## [12.1.2](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.1.1...12.1.2) Fixed Issues
+- Fixed default offset of the rules lawyer pop up
+- Fixed image being squashed
 ## [12.1.1](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.1.0...12.1.1) Aid Fixup
 - Changed code so it applies aid directly, as opposed to through another effect
 - The option to drag an effect instead is still there though
