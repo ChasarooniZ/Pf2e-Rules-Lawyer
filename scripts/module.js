@@ -102,7 +102,7 @@ function createRulesLawyerEffect(vidFile, data, sfxFile) {
   const fadeOutDuration = duration / 5;
   const delay = getSetting("delay") * 1000;
   const scale = videoScale * getSetting("scale") * getSetting("player.scale");
-  const imgOffset = getImageOffset(position);
+  const imgOffset = getImageOffset(position, scale, videoWidth);
 
   // Create effect sequence
   new Sequence()
@@ -149,16 +149,16 @@ function getAnchor(position) {
   }
 }
 
-function getImageOffset(position) {
+function getImageOffset(position, scale, videoWidth) {
   switch (position) {
     case "bot-left":
-      return { x: 60, y: -120 };
+      return { x: scale * videoWidth, y: -120 };
     case "bot-right":
-      return { x: -60, y: -60 };
+      return { x: -scale * videoWidth, y: -60 };
     case "top-left":
-      return { x: 30, y: 60 };
+      return { x: scale * videoWidth, y: 60 };
     case "top-right":
-      return { x: -60, y: 60 };
+      return { x: -scale * videoWidth, y: 60 };
     default:
       return { x: 120, y: 240 };
   }
