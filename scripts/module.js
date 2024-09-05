@@ -119,7 +119,6 @@ function createRulesLawyerEffect(vidFile, data, sfxFile) {
     .fadeOut(fadeOutDuration)
     .screenSpaceScale({
       x: scale,
-      y: scale,
       fitX: true,
       ratioY: true,
     })
