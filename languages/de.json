@@ -1,0 +1,86 @@
+{
+  "I18N.LANGUAGE": "Deutsch",
+  "pf2e-rules-lawyer": {
+    "module-settings": {
+      "enabled": {
+        "name": "Modul aktivieren",
+        "hint": "Aktiviert die Funktionalität des Moduls"
+      },
+      "harmful-options": {
+        "name": "Bedeutung schädlicher +1",
+        "hint": "Wie damit umgehen, wenn ein +1 auf negative Weise wichtig ist (z.B. einem Feind oder einer neutralen Partei hilft)",
+        "choices": {
+          "normal": "Normal behandeln",
+          "none": "Nicht anzeigen",
+          "alt-sound": "Alternativer Ton",
+          "alt-image": "Alternatives Pop-up",
+          "alt-sound-image": "Alternativer Ton & Pop-up"
+        }
+      },
+      "position": {
+        "name": "Position",
+        "hint": "In welchem Teil des Bildschirms soll das Pop-up erscheinen",
+        "choices": {
+          "top-left": "↖ Oben links",
+          "top-right": "↗ Oben rechts",
+          "bot-left": "↙ Unten links",
+          "bot-right": "↘ Unten rechts"
+        }
+      },
+      "player": {
+        "offset": {
+          "x": {
+            "name": "Benutzer X-Versatz",
+            "hint": "Versatz auf der X-Achse (Für Sie)"
+          },
+          "y": {
+            "name": "Benutzer Y-Versatz",
+            "hint": "Versatz auf der Y-Achse (Für Sie)"
+          }
+        },
+        "scale": {
+          "name": "Benutzer-Skalierung",
+          "hint": "Wie stark das Pop-up skaliert werden soll (Für Sie) (1 = Standardgröße) Versatz muss angepasst werden, um sichtbar zu bleiben"
+        }
+      },
+      "offset": {
+        "x": {
+          "name": "X-Versatz",
+          "hint": "Versatz auf der X-Achse"
+        },
+        "y": {
+          "name": "Y-Versatz",
+          "hint": "Versatz auf der Y-Achse"
+        }
+      },
+      "duration": {
+        "name": "Dauer",
+        "hint": "Dauer der Anzeige des Pop-ups in Sekunden (max. 10)"
+      },
+      "delay": {
+        "name": "Verzögerung",
+        "hint": "Wie lange nach Erscheinen der Chat-Nachricht gewartet werden soll, bevor der Effekt in Sekunden angezeigt wird"
+      },
+      "scale": {
+        "name": "Skalierung",
+        "hint": "Wie stark das Pop-up skaliert werden soll (1 = Standardgröße) Versatz muss angepasst werden, um sichtbar zu bleiben"
+      },
+      "volume": {
+        "name": "Lautstärke",
+        "hint": "Lautstärke des SFX"
+      },
+      "aid": {
+        "on-action": {
+          "enable": {
+            "name": "Hilfsmakro automatisch ausführen",
+            "hint": "Wenn aktiviert, wird das Hilfsmakro jedes Mal ausgeführt, wenn Sie die Hilfsaktion verwenden (indem es an den Chat gesendet wird)"
+          }
+        }
+      },
+      "debug": {
+        "name": "Debug aktivieren",
+        "hint": "Debug-Protokollierungsfunktionen aktivieren, um Informationen an den Chat zu senden"
+      }
+    }
+  }
+}

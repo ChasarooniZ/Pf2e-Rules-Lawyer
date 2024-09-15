@@ -1,0 +1,86 @@
+{
+  "I18N.LANGUAGE": "Français",
+  "pf2e-rules-lawyer": {
+    "module-settings": {
+      "enabled": {
+        "name": "Activer le Module",
+        "hint": "Active la fonctionnalité du module"
+      },
+      "harmful-options": {
+        "name": "Importance des +1 Nuisibles",
+        "hint": "Comment gérer quand un +1 importe de manière négative (c'est-à-dire aide un ennemi ou une partie neutre)",
+        "choices": {
+          "normal": "Traiter Normalement",
+          "none": "Ne Pas Afficher",
+          "alt-sound": "Son Alternatif",
+          "alt-image": "Pop-up Alternatif",
+          "alt-sound-image": "Son et Pop-up Alternatifs"
+        }
+      },
+      "position": {
+        "name": "Position",
+        "hint": "Dans quelle partie de l'écran le pop-up doit apparaître",
+        "choices": {
+          "top-left": "↖ En Haut à Gauche",
+          "top-right": "↗ En Haut à Droite",
+          "bot-left": "↙ En Bas à Gauche",
+          "bot-right": "↘ En Bas à Droite"
+        }
+      },
+      "player": {
+        "offset": {
+          "x": {
+            "name": "Décalage X de l'Utilisateur",
+            "hint": "Décalage sur l'axe X (Pour vous)"
+          },
+          "y": {
+            "name": "Décalage Y de l'Utilisateur",
+            "hint": "Décalage sur l'axe Y (Pour vous)"
+          }
+        },
+        "scale": {
+          "name": "Échelle de l'Utilisateur",
+          "hint": "Combien agrandir le pop-up (Pour vous) (1 = taille par défaut) Il faudra ajuster le décalage pour le garder visible"
+        }
+      },
+      "offset": {
+        "x": {
+          "name": "Décalage X",
+          "hint": "Décalage sur l'axe X"
+        },
+        "y": {
+          "name": "Décalage Y",
+          "hint": "Décalage sur l'axe Y"
+        }
+      },
+      "duration": {
+        "name": "Durée",
+        "hint": "Durée d'affichage du pop-up en secondes (max 10)"
+      },
+      "delay": {
+        "name": "Délai",
+        "hint": "Combien de temps attendre après l'apparition du message de chat avant d'afficher l'effet en secondes"
+      },
+      "scale": {
+        "name": "Échelle",
+        "hint": "Combien agrandir le pop-up (1 = taille par défaut) Il faudra ajuster le décalage pour le garder visible"
+      },
+      "volume": {
+        "name": "Volume",
+        "hint": "Volume du SFX"
+      },
+      "aid": {
+        "on-action": {
+          "enable": {
+            "name": "Exécuter Automatiquement la Macro d'Aide",
+            "hint": "Lorsqu'activé, exécutera la macro d'aide chaque fois que vous utilisez l'Action d'aide (en l'envoyant au chat)"
+          }
+        }
+      },
+      "debug": {
+        "name": "Activer le Débogage",
+        "hint": "Activer les fonctions de journalisation de débogage pour envoyer des informations au chat"
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "I18N.LANGUAGE": "简体中文",
+  "pf2e-rules-lawyer": {
+    "module-settings": {
+      "enabled": {
+        "name": "启用模块",
+        "hint": "启用模块功能"
+      },
+      "harmful-options": {
+        "name": "+1有害效果处理",
+        "hint": "如何处理+1产生不利影响的情况（例如帮助敌人或中立方）",
+        "choices": {
+          "normal": "正常处理",
+          "none": "不显示",
+          "alt-sound": "替代音效",
+          "alt-image": "替代弹出",
+          "alt-sound-image": "替代音效和弹出"
+        }
+      },
+      "position": {
+        "name": "位置",
+        "hint": "弹出窗口应出现在屏幕的哪个部分",
+        "choices": {
+          "top-left": "↖ 左上",
+          "top-right": "↗ 右上",
+          "bot-left": "↙ 左下",
+          "bot-right": "↘ 右下"
+        }
+      },
+      "player": {
+        "offset": {
+          "x": {
+            "name": "用户X轴偏移",
+            "hint": "X轴偏移（针对你）"
+          },
+          "y": {
+            "name": "用户Y轴偏移",
+            "hint": "Y轴偏移（针对你）"
+          }
+        },
+        "scale": {
+          "name": "用户缩放",
+          "hint": "弹出窗口的缩放比例（针对你）（1 = 默认大小）需要调整偏移以保持在视图内"
+        }
+      },
+      "offset": {
+        "x": {
+          "name": "X轴偏移",
+          "hint": "X轴偏移"
+        },
+        "y": {
+          "name": "Y轴偏移",
+          "hint": "Y轴偏移"
+        }
+      },
+      "duration": {
+        "name": "持续时间",
+        "hint": "弹出窗口显示的持续时间（秒）（最大10秒）"
+      },
+      "delay": {
+        "name": "延迟",
+        "hint": "聊天消息出现后到显示效果之间的延迟时间（秒）"
+      },
+      "scale": {
+        "name": "缩放",
+        "hint": "弹出窗口的缩放比例（1 = 默认大小）需要调整偏移以保持在视图内"
+      },
+      "volume": {
+        "name": "音量",
+        "hint": "音效的音量"
+      },
+      "aid": {
+        "on-action": {
+          "enable": {
+            "name": "自动运行援助宏",
+            "hint": "启用后，每当你使用援助动作时（通过发送到聊天）将运行援助宏"
+          }
+        }
+      },
+      "debug": {
+        "name": "启用调试",
+        "hint": "启用调试日志功能以将信息发送到聊天"
+      }
+    }
+  }
+}

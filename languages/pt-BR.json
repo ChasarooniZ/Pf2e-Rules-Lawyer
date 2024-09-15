@@ -1,0 +1,86 @@
+{
+  "I18N.LANGUAGE": "Português (Brasil)",
+  "pf2e-rules-lawyer": {
+    "module-settings": {
+      "enabled": {
+        "name": "Ativar Módulo",
+        "hint": "Ativa a funcionalidade do módulo"
+      },
+      "harmful-options": {
+        "name": "+1s Prejudiciais Importam",
+        "hint": "Como lidar quando um +1 importa de maneira negativa (por exemplo, ajuda um inimigo ou parte neutra)",
+        "choices": {
+          "normal": "Tratar Normalmente",
+          "none": "Não Mostrar",
+          "alt-sound": "Som Alternativo",
+          "alt-image": "Pop-up Alternativo",
+          "alt-sound-image": "Som e Pop-up Alternativos"
+        }
+      },
+      "position": {
+        "name": "Posição",
+        "hint": "Em que parte da tela o pop-up deve aparecer",
+        "choices": {
+          "top-left": "↖ Superior Esquerdo",
+          "top-right": "↗ Superior Direito",
+          "bot-left": "↙ Inferior Esquerdo",
+          "bot-right": "↘ Inferior Direito"
+        }
+      },
+      "player": {
+        "offset": {
+          "x": {
+            "name": "Deslocamento X do Usuário",
+            "hint": "Deslocamento no eixo X (Para você)"
+          },
+          "y": {
+            "name": "Deslocamento Y do Usuário",
+            "hint": "Deslocamento no eixo Y (Para você)"
+          }
+        },
+        "scale": {
+          "name": "Escala do Usuário",
+          "hint": "Quanto escalar o pop-up (Para você) (1 = tamanho padrão) Será necessário ajustar o deslocamento para manter na visualização"
+        }
+      },
+      "offset": {
+        "x": {
+          "name": "Deslocamento X",
+          "hint": "Deslocamento no eixo X"
+        },
+        "y": {
+          "name": "Deslocamento Y",
+          "hint": "Deslocamento no eixo Y"
+        }
+      },
+      "duration": {
+        "name": "Duração",
+        "hint": "Duração para mostrar o pop-up em segundos (máximo 10)"
+      },
+      "delay": {
+        "name": "Atraso",
+        "hint": "Quanto tempo esperar após a mensagem de chat aparecer antes de mostrar o efeito em segundos"
+      },
+      "scale": {
+        "name": "Escala",
+        "hint": "Quanto escalar o pop-up (1 = tamanho padrão) Será necessário ajustar o deslocamento para manter na visualização"
+      },
+      "volume": {
+        "name": "Volume",
+        "hint": "Volume do SFX"
+      },
+      "aid": {
+        "on-action": {
+          "enable": {
+            "name": "Executar Macro de Ajuda Automaticamente",
+            "hint": "Quando ativado, executará a macro de ajuda sempre que você usar a Ação de ajuda (enviando-a para o chat)"
+          }
+        }
+      },
+      "debug": {
+        "name": "Ativar Depuração",
+        "hint": "Ativa recursos de registro de depuração para enviar informações para o chat"
+      }
+    }
+  }
+}

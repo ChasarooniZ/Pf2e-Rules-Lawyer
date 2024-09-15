@@ -1,0 +1,86 @@
+{
+  "I18N.LANGUAGE": "Polski",
+  "pf2e-rules-lawyer": {
+    "module-settings": {
+      "enabled": {
+        "name": "Włącz moduł",
+        "hint": "Włącza funkcjonalność modułu"
+      },
+      "harmful-options": {
+        "name": "Znaczenie szkodliwych +1",
+        "hint": "Jak obsłużyć sytuację, gdy +1 ma znaczenie w negatywny sposób (np. pomaga wrogowi lub neutralnej stronie)",
+        "choices": {
+          "normal": "Traktuj normalnie",
+          "none": "Nie pokazuj",
+          "alt-sound": "Alternatywny dźwięk",
+          "alt-image": "Alternatywne wyskakujące okno",
+          "alt-sound-image": "Alternatywny dźwięk i wyskakujące okno"
+        }
+      },
+      "position": {
+        "name": "Pozycja",
+        "hint": "W której części ekranu powinno pojawić się wyskakujące okno",
+        "choices": {
+          "top-left": "↖ Lewy górny róg",
+          "top-right": "↗ Prawy górny róg",
+          "bot-left": "↙ Lewy dolny róg",
+          "bot-right": "↘ Prawy dolny róg"
+        }
+      },
+      "player": {
+        "offset": {
+          "x": {
+            "name": "Przesunięcie X użytkownika",
+            "hint": "Przesunięcie w osi X (dla Ciebie)"
+          },
+          "y": {
+            "name": "Przesunięcie Y użytkownika",
+            "hint": "Przesunięcie w osi Y (dla Ciebie)"
+          }
+        },
+        "scale": {
+          "name": "Skala użytkownika",
+          "hint": "O ile przeskalować wyskakujące okno (dla Ciebie) (1 = domyślny rozmiar) Konieczne będzie dostosowanie przesunięcia, aby zachować widoczność"
+        }
+      },
+      "offset": {
+        "x": {
+          "name": "Przesunięcie X",
+          "hint": "Przesunięcie w osi X"
+        },
+        "y": {
+          "name": "Przesunięcie Y",
+          "hint": "Przesunięcie w osi Y"
+        }
+      },
+      "duration": {
+        "name": "Czas trwania",
+        "hint": "Czas wyświetlania wyskakującego okna w sekundach (maksymalnie 10)"
+      },
+      "delay": {
+        "name": "Opóźnienie",
+        "hint": "Jak długo opóźnić pojawienie się efektu po wyświetleniu wiadomości na czacie (w sekundach)"
+      },
+      "scale": {
+        "name": "Skala",
+        "hint": "O ile przeskalować wyskakujące okno (1 = domyślny rozmiar) Konieczne będzie dostosowanie przesunięcia, aby zachować widoczność"
+      },
+      "volume": {
+        "name": "Głośność",
+        "hint": "Głośność efektów dźwiękowych"
+      },
+      "aid": {
+        "on-action": {
+          "enable": {
+            "name": "Automatycznie uruchamiaj makro pomocy",
+            "hint": "Po włączeniu będzie uruchamiać makro pomocy za każdym razem, gdy użyjesz akcji pomocy (wysyłając ją na czat)"
+          }
+        }
+      },
+      "debug": {
+        "name": "Włącz debugowanie",
+        "hint": "Włącz funkcje debugowania, aby wysyłać informacje na czat"
+      }
+    }
+  }
+}

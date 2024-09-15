@@ -1,0 +1,86 @@
+{
+  "I18N.LANGUAGE": "Español",
+  "pf2e-rules-lawyer": {
+    "module-settings": {
+      "enabled": {
+        "name": "Habilitar Módulo",
+        "hint": "Habilita la funcionalidad del módulo"
+      },
+      "harmful-options": {
+        "name": "Importancia de +1 Perjudiciales",
+        "hint": "Cómo manejar cuando un +1 importa de manera negativa (es decir, ayuda a un enemigo o parte neutral)",
+        "choices": {
+          "normal": "Tratar Normalmente",
+          "none": "No Mostrar",
+          "alt-sound": "Sonido Alternativo",
+          "alt-image": "Ventana Emergente Alternativa",
+          "alt-sound-image": "Sonido y Ventana Emergente Alternativos"
+        }
+      },
+      "position": {
+        "name": "Posición",
+        "hint": "En qué parte de la pantalla debe aparecer la ventana emergente",
+        "choices": {
+          "top-left": "↖ Arriba a la Izquierda",
+          "top-right": "↗ Arriba a la Derecha",
+          "bot-left": "↙ Abajo a la Izquierda",
+          "bot-right": "↘ Abajo a la Derecha"
+        }
+      },
+      "player": {
+        "offset": {
+          "x": {
+            "name": "Desplazamiento X del Usuario",
+            "hint": "Desplazamiento en el eje X (Para ti)"
+          },
+          "y": {
+            "name": "Desplazamiento Y del Usuario",
+            "hint": "Desplazamiento en el eje Y (Para ti)"
+          }
+        },
+        "scale": {
+          "name": "Escala del Usuario",
+          "hint": "Cuánto escalar la ventana emergente (Para ti) (1 = tamaño predeterminado) Necesitarás ajustar el desplazamiento para mantenerlo visible"
+        }
+      },
+      "offset": {
+        "x": {
+          "name": "Desplazamiento X",
+          "hint": "Desplazamiento en el eje X"
+        },
+        "y": {
+          "name": "Desplazamiento Y",
+          "hint": "Desplazamiento en el eje Y"
+        }
+      },
+      "duration": {
+        "name": "Duración",
+        "hint": "Duración para mostrar la ventana emergente en segundos (máximo 10)"
+      },
+      "delay": {
+        "name": "Retraso",
+        "hint": "Cuánto tiempo esperar después de que aparezca el mensaje de chat antes de mostrar el efecto en segundos"
+      },
+      "scale": {
+        "name": "Escala",
+        "hint": "Cuánto escalar la ventana emergente (1 = tamaño predeterminado) Necesitarás ajustar el desplazamiento para mantenerlo visible"
+      },
+      "volume": {
+        "name": "Volumen",
+        "hint": "Volumen del SFX"
+      },
+      "aid": {
+        "on-action": {
+          "enable": {
+            "name": "Ejecutar Automáticamente la Macro de Ayuda",
+            "hint": "Cuando está habilitado, ejecutará la macro de ayuda cada vez que uses la Acción de ayuda (enviándola al chat)"
+          }
+        }
+      },
+      "debug": {
+        "name": "Habilitar Depuración",
+        "hint": "Habilitar funciones de registro de depuración para enviar información al chat"
+      }
+    }
+  }
+}
