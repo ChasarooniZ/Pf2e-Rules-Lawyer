@@ -1,7 +1,7 @@
 {
   "id": "pf2e-rules-lawyer",
   "title": "PF2e Rules Lawyer",
-  "description": "A FAN module inspired by the rules Lawyer that shows off his iconic +1s Matter",
+  "description": "A FAN module inspired by the Rules Lawyer that shows off his iconic +1s Matter",
   "version": "#{VERSION}#",
   "compatibility": {
     "minimum": "11",

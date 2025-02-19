@@ -1,18 +1,16 @@
-export function handleDiceSoNice(func, params, msgID = null) {
-  if (
-    game.modules.get("dice-so-nice")?.active &&
-    !game.settings.get("dice-so-nice", "immediatelyDisplayChatMessages")
-  ) {
-    const hookId = Hooks.on("diceSoNiceRollComplete", (id) => {
-      if (id === msgID || msgID === null) {
-        func(...params);
-        disableHook();
-      }
-    });
-    function disableHook() {
-      Hooks.off("createChatMessage", hookId);
-    }
-  } else {
-    func(...params);
-  }
+export function waitForMessage(id, ms = 250, attempts = 120) {
+  return new Promise(function (resolve, reject) {
+    (function wait(count = 0) {
+      if (count > attempts) return reject();
+
+      if (
+        count != 0 &&
+        ui.chat.element.find(`.message[data-message-id="${id}"]:not(.dsn-hide)`)
+          .length !== 0
+      )
+        return resolve();
+
+      setTimeout(wait, ms, count + 1);
+    })();
+  });
 }

@@ -1,3 +1,7 @@
+## [12.2.0](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.1.3...12.2.0) - Major Fixes
+- Fix Dice So Nice support
+- Fixed the check to better capture whether a roll was positive or negative
+
 ## [12.1.3](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.1.2...12.1.3) Tower of Babel
 
 - Added Languages Support for:

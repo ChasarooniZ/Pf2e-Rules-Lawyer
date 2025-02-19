@@ -62,7 +62,10 @@ Hooks.once("ready", function () {
           return;
       }
     }
-    handleDiceSoNice(createRulesLawyerEffect, [vidFile, data, sfxFile]);
+
+    waitForMessage(msg.id).then(() =>
+      createRulesLawyerEffect(vidFile, data, sfxFile)
+    );
   });
   Hooks.on("createChatMessage", async function (msg, _status, userid) {
     if (
@@ -181,15 +184,27 @@ function getUIOffset(position) {
 
 function isHelpfulOrHarmful(data) {
   const relevantSignificance = [];
+
   const isRollerGood = data?.rollingActor?.alliance === "party";
+
   const isDCGood = data?.actorWithDc?.alliance === "party";
+
   const isAttack =
     data.chatMessage?.flags?.pf2e?.context?.type === "attack-roll";
-  if (isRollerGood) relevantSignificance.push("ESSENTIAL");
-  if (isDCGood)
-    isAttack
-      ? relevantSignificance.push("HARMFUL")
-      : relevantSignificance.push("ESSENTIAL");
+
+  if (isRollerGood) {
+    relevantSignificance.push("ESSENTIAL");
+    relevantSignificance.push("HELPFUL");
+  }
+  if (isDCGood) {
+    if (isAttack) {
+      relevantSignificance.push("HARMFUL");
+      relevantSignificance.push("DETRIMENTAL");
+    } else {
+      relevantSignificance.push("ESSENTIAL");
+      relevantSignificance.push("HELPFUL");
+    }
+  }
   return data.significantModifiers.some((mod) =>
     relevantSignificance.includes(mod.significance)
   )
