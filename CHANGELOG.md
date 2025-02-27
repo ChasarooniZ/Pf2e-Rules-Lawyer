@@ -1,3 +1,6 @@
+ ## [12.2.3](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.2...12.2.3) - Sequencer
+ - Updated requires sequencer version to `3.4.9`
+
  ## [12.2.2](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.1...12.2.2) - Importing
  - Fixed missing import
 
