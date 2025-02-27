@@ -1,3 +1,7 @@
+## [12.2.5](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.4...12.2.5) - Aid Macro Fixes
+
+- Possible fix for aid macro
+
 ## [12.2.4](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.3...12.2.4) - Missing Imports
 
 - Fix extra hanging import

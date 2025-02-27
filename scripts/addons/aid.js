@@ -39,14 +39,10 @@ export async function aid() {
   async function waitForAid(msg, _misc, id) {
     if (id === game.user.id && msg.isCheckRoll) {
       const rollValue = msg?.rolls?.[0]?.total;
-      waitForMessage(msg.id).then(
-        (rollValue, dc, token, target, hookId) => {
-          handleResult(rollValue, dc, token, target);
-          Hooks.off("createChatMessage", hookId);
-        },
-        [rollValue, dc, token, target, hookId],
-        msg.id
-      );
+      waitForMessage(msg.id).then(() => {
+        handleResult(rollValue);
+        Hooks.off("createChatMessage", hookId);
+      });
     }
   }
 
@@ -58,7 +54,8 @@ export async function aid() {
     await tok.actor.createEmbeddedDocuments("Item", [source]);
   }
 
-  async function handleResult(rollValue, dcVal, tok, targ) {
+  async function handleResult(rollValue) {
+    const [dcVal, tok, targ] = [dc, token, target];
     const diff = rollValue - dcVal;
     const data = {};
     const aidUUID = "Compendium.pf2e.other-effects.Item.AHMUpMbaVkZ5A1KX";
