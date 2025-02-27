@@ -1,4 +1,4 @@
-import { handleDiceSoNice } from "./diceSoNice.js";
+import { waitForMessage } from "./diceSoNice";
 
 export async function aid() {
   let dc = await Dialog.wait({
@@ -39,7 +39,7 @@ export async function aid() {
   async function waitForAid(msg, _misc, id) {
     if (id === game.user.id && msg.isCheckRoll) {
       const rollValue = msg?.rolls?.[0]?.total;
-      handleDiceSoNice(
+      waitForMessage(msg.id).then(
         (rollValue, dc, token, target, hookId) => {
           handleResult(rollValue, dc, token, target);
           Hooks.off("createChatMessage", hookId);
@@ -61,7 +61,7 @@ export async function aid() {
   async function handleResult(rollValue, dcVal, tok, targ) {
     const diff = rollValue - dcVal;
     const data = {};
-    const aidUUID = 'Compendium.pf2e.other-effects.Item.AHMUpMbaVkZ5A1KX';
+    const aidUUID = "Compendium.pf2e.other-effects.Item.AHMUpMbaVkZ5A1KX";
     if (diff >= 10) {
       //Crit Success
       data.degree = "Critical Success";
@@ -92,9 +92,9 @@ export async function aid() {
         actorUuid: targ.actor.uuid,
         eff: aidUUID,
         setChoice: {
-            flag: 'aidBonus',
-            value: Number(data.bonus)
-        }
+          flag: "aidBonus",
+          value: Number(data.bonus),
+        },
       });
     }
     ChatMessage.create({
