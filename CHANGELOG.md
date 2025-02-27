@@ -1,4 +1,7 @@
-## [12.2.1](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.1.3...12.2.1) - Coming to your AId
+ ## [12.2.2](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.1...12.2.2) - Importing
+ - Fixed missing import
+
+## [12.2.1](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.0...12.2.1) - Coming to your AId
 - Fix Dice So Nice support for the `Aid` macro (🐛 @webdove)
 
 ## [12.2.0](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.1.3...12.2.0) - Major Fixes

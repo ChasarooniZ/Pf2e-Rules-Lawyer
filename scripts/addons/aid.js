@@ -1,4 +1,4 @@
-import { waitForMessage } from "./diceSoNice";
+import { waitForMessage } from "./diceSoNice.js";
 
 export async function aid() {
   let dc = await Dialog.wait({
