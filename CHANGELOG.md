@@ -1,13 +1,21 @@
- ## [12.2.3](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.2...12.2.3) - Sequencer
- - Updated requires sequencer version to `3.4.9`
+## [12.2.4](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.3...12.2.4) - Missing Imports
 
- ## [12.2.2](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.1...12.2.2) - Importing
- - Fixed missing import
+- Fix extra hanging import
+
+## [12.2.3](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.2...12.2.3) - Sequencer
+
+- Updated requires sequencer version to `3.4.9`
+
+## [12.2.2](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.1...12.2.2) - Importing
+
+- Fixed missing import
 
 ## [12.2.1](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.0...12.2.1) - Coming to your AId
+
 - Fix Dice So Nice support for the `Aid` macro (🐛 @webdove)
 
 ## [12.2.0](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.1.3...12.2.0) - Major Fixes
+
 - Fix Dice So Nice support
 - Fixed the check to better capture whether a roll was positive or negative
 
@@ -25,8 +33,10 @@
   - Português (Portuguese [Brasil])
 
 ## [12.1.2](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.1.1...12.1.2) Fixed Issues
+
 - Fixed default offset of the rules lawyer pop up
 - Fixed image being squashed
+
 ## [12.1.1](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.1.0...12.1.1) Aid Fixup
 
 - Changed code so it applies aid directly, as opposed to through another effect

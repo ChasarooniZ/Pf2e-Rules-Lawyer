@@ -1,5 +1,4 @@
 import { aid } from "./addons/aid.js";
-import { handleDiceSoNice } from "./addons/diceSoNice.js";
 import { setupSocket } from "./addons/socket.js";
 import {
   RULES_LAWYER_EVIL_SFX,
