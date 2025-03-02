@@ -1,4 +1,5 @@
 import { aid } from "./addons/aid.js";
+import { waitForMessage } from "./addons/diceSoNice.js";
 import { setupSocket } from "./addons/socket.js";
 import {
   RULES_LAWYER_EVIL_SFX,
@@ -62,9 +63,9 @@ Hooks.once("ready", function () {
       }
     }
 
-    waitForMessage(msg.id).then(() =>
-      createRulesLawyerEffect(vidFile, data, sfxFile)
-    );
+    //waitForMessage(data.chatMessage.id).then(() =>
+    createRulesLawyerEffect(vidFile, data, sfxFile);
+    //);
   });
   Hooks.on("createChatMessage", async function (msg, _status, userid) {
     if (
