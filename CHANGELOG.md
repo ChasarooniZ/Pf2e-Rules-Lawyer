@@ -1,7 +1,6 @@
 ## [12.2.6](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.5...12.2.6) - Fix Rules Lawyer Effect
 
-- Fix Rules Lawyer effect not running (🐛 @sharpwaveripple
-)
+- Fix Rules Lawyer effect not running (🐛 @sharpwaveripple)
 
 ## [12.2.5](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.4...12.2.5) - Aid Macro Fixes
 
