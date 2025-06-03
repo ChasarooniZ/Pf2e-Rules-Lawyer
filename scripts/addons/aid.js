@@ -1,31 +1,32 @@
 import { waitForMessage } from "./diceSoNice.js";
 
 export async function aid() {
-  let dc = await Dialog.wait({
-    title: "Ronald's Aid Macro",
+  let dc = await foundry.applications.api.DialogV2.wait({
+    window: { title: "Ronald's Aid Macro" },
     content: `
-            <form>
-                <div class="form-group">
-                    <label>DC of Aid Check:</label>
-                    <input type="number" name="number" required>
-                </div>
-            </form>
-        `,
-    buttons: {
-      submit: {
+      <div class="form-group">
+        <label>DC of Aid Check:</label>
+        <input type="number" name="number" required>
+      </div>
+    `,
+    buttons: [
+      {
         icon: '<i class="fas fa-check"></i>',
         label: "Submit",
-        callback: (html) => {
-          let number = parseInt(html.find('input[name="number"]').val());
+        action: "submit",
+        callback: (event, button, dialog) => {
+          // Access the input value via button.form.elements
+          let number = parseInt(button.form.elements.number.value);
           if (!isNaN(number)) {
-            // Handle the number here (for example, send it to chat)
             return number;
           } else {
             ui.notifications.error("Please enter a valid number.");
+            return null; // Returning null keeps the dialog open
           }
         },
       },
-    },
+    ],
+    rejectClose: false, // Optional: prevents error if dialog is closed without submission
   });
   let hookId = -1;
   const token = canvas.tokens.controlled?.[0] ?? game.user.character.token;

@@ -1,3 +1,10 @@
+## [13.1.0](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.6...13.1.0) - New UI
+
+- `Updates`
+  - Module now supports `V13`, refer to `12.2.6` for the last v12 support version
+  - Updated the `Aid` automation to `App V2`
+  - Fixed misc bug with diceSoNice hook for the `aid` macro
+
 ## [12.2.6](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.5...12.2.6) - Fix Rules Lawyer Effect
 
 - Fix Rules Lawyer effect not running (🐛 @sharpwaveripple)

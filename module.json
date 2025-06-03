@@ -40,7 +40,6 @@
           "verified": "1.9.5"
         }
       },
-
       {
         "id": "socketlib",
         "type": "module",
