@@ -5,8 +5,9 @@ export function waitForMessage(id, ms = 250, attempts = 120) {
 
       if (
         count != 0 &&
-        ui.chat.element.find(`.message[data-message-id="${id}"]:not(.dsn-hide)`)
-          .length !== 0
+        $(ui.chat.element).find(
+          `.message[data-message-id="${id}"]:not(.dsn-hide)`
+        ).length !== 0
       )
         return resolve();
 
