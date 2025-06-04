@@ -81,6 +81,31 @@
         "name": "Enable Debug",
         "hint": "Enable debug logging features to send info to chat"
       }
+    },
+    "dialog": {
+      "aid": {
+        "title": "Ronald's Aid Macro",
+        "description": "DC of Aid Check",
+        "submit": "Submit DC"
+      }
+    },
+    "notification": {
+      "aid-effect": "You are now prepared to aid, now attempt the appropriate skill or attack roll as approved by the DM"
+    },
+    "dos": {
+      "cs": "Critical Success",
+      "s": "Success",
+      "f": "Failure",
+      "cf": "Critical Failure"
+    },
+    "message": {
+      "aid": "Aid",
+      "dc": "DC",
+      "succeeded": "succeeded",
+      "failed": "failed",
+      "by": "by",
+      "your-ally": "Your Ally gets a",
+      "to-their": "to their check or attack roll"
     }
   }
 }

@@ -1,39 +1,35 @@
 import { waitForMessage } from "./diceSoNice.js";
 
 export async function aid() {
-  let dc = await foundry.applications.api.DialogV2.wait({
-    window: { title: "Ronald's Aid Macro" },
-    content: `
-      <div class="form-group">
-        <label>DC of Aid Check:</label>
-        <input type="number" name="number" required>
-      </div>
-    `,
-    buttons: [
-      {
-        icon: '<i class="fas fa-check"></i>',
-        label: "Submit",
-        action: "submit",
-        callback: (event, button, dialog) => {
-          // Access the input value via button.form.elements
-          let number = parseInt(button.form.elements.number.value);
-          if (!isNaN(number)) {
-            return number;
-          } else {
-            ui.notifications.error("Please enter a valid number.");
-            return null; // Returning null keeps the dialog open
-          }
-        },
+  let dc;
+  try {
+    dc = await foundry.applications.api.DialogV2.prompt({
+      window: {
+        title: game.i18n.localize("pf2e-rules-lawyer.dialog.aid.title"),
       },
-    ],
-    rejectClose: false, // Optional: prevents error if dialog is closed without submission
-  });
+      content: `<div class="form-group">
+          <label>${game.i18n.localize(
+            "pf2e-rules-lawyer.dialog.aid.description"
+          )}:</label>
+          <input name="dc" type="number" min="1" max="200" step="1" autofocus>
+        </div>`,
+      ok: {
+        label: game.i18n.localize("pf2e-rules-lawyer.dialog.aid.submit"),
+        callback: (event, button, dialog) =>
+          button.form.elements.dc.valueAsNumber,
+      },
+    });
+  } catch {
+    console.log("User did not submit a dc.");
+    return;
+  }
+
   let hookId = -1;
   const token = canvas.tokens.controlled?.[0] ?? game.user.character.token;
   const target = game.user.targets.first();
   if (token) addAidingEffect(token);
   ui.notifications.notify(
-    `You are now prepared to aid, now attempt the appropriate skill or attack roll as approved by the DM`
+    game.i18n.localize("pf2e-rules-lawyer.notification.aid-effect")
   );
 
   hookId = Hooks.on("createChatMessage", waitForAid);
@@ -62,25 +58,25 @@ export async function aid() {
     const aidUUID = "Compendium.pf2e.other-effects.Item.AHMUpMbaVkZ5A1KX";
     if (diff >= 10) {
       //Crit Success
-      data.degree = "Critical Success";
+      data.degree = game.i18n.localize("pf2e-rules-lawyer.dos.cs");
       data.bonus = "+4";
       data.uuid =
         "Compendium.pf2e-rules-lawyer.rules-lawyer-patched-items.Item.dBlNyIre5KrR9yHM";
     } else if (diff >= 0) {
       //Success
-      data.degree = "Success";
+      data.degree = game.i18n.localize("pf2e-rules-lawyer.dos.s");
       data.bonus = "+2";
       data.uuid =
         "Compendium.pf2e-rules-lawyer.rules-lawyer-patched-items.Item.3CuvkOIoaCKVo9zg";
     } else if (diff > -10) {
       //Failure
-      data.degree = "Failure";
+      data.degree = game.i18n.localize("pf2e-rules-lawyer.dos.f");
       data.bonus = "+1";
       data.uuid =
         "Compendium.pf2e-rules-lawyer.rules-lawyer-patched-items.Item.v3dEizRtPt4nPmSP";
     } else {
       //Critical Failure
-      data.degree = "Critical Failure";
+      data.degree = game.i18n.localize("pf2e-rules-lawyer.dos.cf");
       data.bonus = "-1";
       data.uuid =
         "Compendium.pf2e-rules-lawyer.rules-lawyer-patched-items.Item.bWQKYNvuKi0fPJZG";
@@ -96,13 +92,19 @@ export async function aid() {
       });
     }
     ChatMessage.create({
-      content: `<h3>Aid</h3>
-        <p><i>DC ${dc} ${diff >= 0 ? "succeeded" : "failed"} by ${
+      content: `<h3>${game.i18n.localize("pf2e-rules-lawyer.message.aid")}</h3>
+        <p><i>${game.i18n.localize("pf2e-rules-lawyer.message.dc")} ${dc} ${
+        diff >= 0
+          ? game.i18n.localize("pf2e-rules-lawyer.message.succeeded")
+          : game.i18n.localize("pf2e-rules-lawyer.message.failed")
+      } ${game.i18n.localize("pf2e-rules-lawyer.message.by")} ${
         diff > 0 ? "+" + diff.toString() : diff
       }</i></p>
-        <b>${data.degree}</b> Your ally gets a <b>${
-        data.bonus
-      }</b> to their check or attack roll
+        <b>${data.degree}</b> ${game.i18n.localize(
+        "pf2e-rules-lawyer.message.your-ally"
+      )} <b>${data.bonus}</b> ${game.i18n.localize(
+        "pf2e-rules-lawyer.message.to-their"
+      )}
       <p>@UUID[${data.uuid}]</p>`,
       speaker: ChatMessage.getSpeaker({ token: tok.actor }),
     });

@@ -4,6 +4,8 @@
   - Module now supports `V13`, refer to `12.2.6` for the last v12 support version
   - Updated the `Aid` automation to `App V2`
   - Fixed misc bug with diceSoNice hook for the `aid` macro
+- `Added`
+  - Localization for Aid workflow
 
 ## [12.2.6](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.5...12.2.6) - Fix Rules Lawyer Effect
 
