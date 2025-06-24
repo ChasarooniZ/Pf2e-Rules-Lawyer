@@ -77,6 +77,10 @@
           }
         }
       },
+      "exact-only": {
+        "name": "Show only on Exact Matters",
+        "hint": "Show it only if you fail/succeed/critically succeed by 0 (not recommended for most cases as this will make it show exceedingly rarely)"
+      },
       "debug": {
         "name": "Enable Debug",
         "hint": "Enable debug logging features to send info to chat"

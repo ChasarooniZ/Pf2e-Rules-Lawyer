@@ -34,6 +34,7 @@ Hooks.once("ready", function () {
   Hooks.on("modifiersMatter", (data) => {
     //console.log({ modifiers: data })
     if (!getSetting("enabled")) return;
+    if (getSetting("exact-only") && !isExact(data?.chatMessage)) return;
     const harmHelp = isHelpfulOrHarmful(data);
     debugLog({ data, harmHelp });
     let vidFile = RULES_LAWYER_VID;
@@ -210,6 +211,13 @@ function isHelpfulOrHarmful(data) {
   )
     ? "HELPFUL"
     : "HARMFUL";
+}
+
+function isExact(chatMessage) {
+  return (
+    chatMessage?.flags?.pf2e?.context?.dc?.value ===
+    chatMessage?.rolls?.[0]?.total
+  );
 }
 
 export function debugLog(data, context = "") {

@@ -1,3 +1,9 @@
+## [13.2.0](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/13.1.0...13.2.0) - Exact
+
+- `Added`
+  - New setting option to only show on exact +1 mattering (so success by 0) (🧠 @Kurash1
+    )
+
 ## [13.1.0](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/12.2.6...13.1.0) - New UI
 
 - `Updates`
