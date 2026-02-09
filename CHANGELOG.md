@@ -1,3 +1,8 @@
+## 13.3.0
+
+- **New**
+  - Enabled `SF2e` support
+
 ## [13.2.0](https://github.com/ChasarooniZ/Pf2e-Rules-Lawyer/compare/13.1.0...13.2.0) - Exact
 
 - `Added`
