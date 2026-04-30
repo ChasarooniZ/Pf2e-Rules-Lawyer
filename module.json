@@ -4,8 +4,8 @@
   "description": "A FAN module inspired by the Rules Lawyer that shows off his iconic +1s Matter",
   "version": "#{VERSION}#",
   "compatibility": {
-    "minimum": "11",
-    "verified": "12"
+    "minimum": "13",
+    "verified": "14"
   },
   "authors": [
     {
@@ -36,8 +36,8 @@
         "id": "sequencer",
         "type": "module",
         "compatibility": {
-          "minimum": "3.4.9",
-          "verified": "3.4.9"
+          "minimum": "4.0.2",
+          "verified": "4.0.2"
         }
       },
       {

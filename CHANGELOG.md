@@ -1,3 +1,8 @@
+## 14.0.0
+
+- Updated to support FVTT `v14` (and minimum support to `v13`)
+- Updated minimum support sequencer version to `4.0.1`
+
 ## 13.3.0
 
 - **New**
