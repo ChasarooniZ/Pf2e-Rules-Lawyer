@@ -2,6 +2,7 @@
 
 - Updated to support FVTT `v14` (and minimum support to `v13`)
 - Updated minimum support sequencer version to `4.0.1`
+- Fixed bug where sometimes the incorrect version of the FX would show up (IE positive for negative and negative for positive)
 
 ## 13.3.0
 

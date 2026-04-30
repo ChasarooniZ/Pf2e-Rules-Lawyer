@@ -24,7 +24,7 @@ Hooks.once("ready", function () {
       createRulesLawyerEffect(
         effectData.vid,
         [...game.users.keys()],
-        effectData.sfx
+        effectData.sfx,
       );
     },
     aid: function () {
@@ -42,7 +42,7 @@ Hooks.once("ready", function () {
     if (harmHelp === "HARMFUL") {
       const harmful_option = game.settings.get(
         "pf2e-rules-lawyer",
-        "harmful-options"
+        "harmful-options",
       );
       switch (harmful_option) {
         case "none":
@@ -187,27 +187,16 @@ function isHelpfulOrHarmful(data) {
   const relevantSignificance = [];
 
   const isRollerGood = data?.rollingActor?.alliance === "party";
-
   const isDCGood = data?.actorWithDc?.alliance === "party";
 
-  const isAttack =
-    data.chatMessage?.flags?.pf2e?.context?.type === "attack-roll";
-
   if (isRollerGood) {
-    relevantSignificance.push("ESSENTIAL");
-    relevantSignificance.push("HELPFUL");
+    relevantSignificance.push("ESSENTIAL", "HELPFUL");
+  } else if (isDCGood) {
+    relevantSignificance.push("HARMFUL", "DETRIMENTAL");
   }
-  if (isDCGood) {
-    if (isAttack) {
-      relevantSignificance.push("HARMFUL");
-      relevantSignificance.push("DETRIMENTAL");
-    } else {
-      relevantSignificance.push("ESSENTIAL");
-      relevantSignificance.push("HELPFUL");
-    }
-  }
+
   return data.significantModifiers.some((mod) =>
-    relevantSignificance.includes(mod.significance)
+    relevantSignificance.includes(mod.significance),
   )
     ? "HELPFUL"
     : "HARMFUL";
@@ -224,6 +213,6 @@ export function debugLog(data, context = "") {
   if (getSetting("debug"))
     console.log(
       `PF2E-Rules-Lawyer${context ? "[" + context + "]" : ""}:`,
-      data
+      data,
     );
 }
